@@ -52,7 +52,8 @@ class StudentResultJSONNull: Codable, Hashable {
 }
 
 
-struct ResultSemesterList : Codable {
+struct ResultSemesterList : Codable, Identifiable {
+    let id: String?
     let totalpointsecuredsgpa : Double?
     let totalcoursecredit : Double?
     let totalearnedcredits : Double?
@@ -90,6 +91,7 @@ struct ResultSemesterList : Codable {
 
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
+        id = UUID().uuidString
         totalpointsecuredsgpa = try values.decodeIfPresent(Double.self, forKey: .totalpointsecuredsgpa)
         totalcoursecredit = try values.decodeIfPresent(Double.self, forKey: .totalcoursecredit)
         totalearnedcredits = try values.decodeIfPresent(Double.self, forKey: .totalearnedcredits)

@@ -50,3 +50,28 @@ struct PersonalInfo: Decodable {
     let qualification: [Qualification]
     let generalinformation: GeneralInformation
 }
+
+
+
+struct StudentInfoRequest: Codable {
+    let status: StudentInfoStatus?
+    let response: StudentInfoResponse?
+}
+
+// MARK: - Response
+struct StudentInfoResponse: Codable {
+    let studentinfo: Studentinfo?
+}
+
+// MARK: - Studentinfo
+struct Studentinfo: Codable {
+    let branchid, branchcode, programcode: String?
+    let stymax: Int?
+    let programdesc, instituteid, branchdesc, programid: String?
+}
+
+// MARK: - Status
+struct StudentInfoStatus: Codable {
+    let responseStatus: String?
+    let errors, identifier: JSONNull?
+}

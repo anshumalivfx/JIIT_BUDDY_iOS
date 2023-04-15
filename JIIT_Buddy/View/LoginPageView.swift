@@ -16,6 +16,7 @@ struct HomeLoginView: View {
     @AppStorage("token") var tokenResponse: String = ""
     @AppStorage("clientid") var clientId: String = ""
     @AppStorage("memberid") var memberid: String = ""
+    @AppStorage("instituteid") var instituteid: String = ""
     @State private var opacity = 0.0
     @State private var showAlert: Bool = false
 
@@ -41,7 +42,6 @@ struct HomeLoginView: View {
                     .font(.title2)
                     .foregroundColor(.white)
                 TextField("User ID", text: $rollno)
-                    .keyboardType(.numberPad)
                     .onChange(of: rollno) { newValue in
                         withAnimation {
                             if rollno != "" && password != "" {
@@ -91,6 +91,7 @@ struct HomeLoginView: View {
                         token = user.response.regdata.token
                         clientid = user.response.regdata.clientid
                         memberid = user.response.regdata.memberid
+                        instituteid = user.response.regdata.institutelist[0].value
                         print(user.response.regdata.token)
                         spinner = false
                         

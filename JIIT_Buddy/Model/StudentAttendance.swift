@@ -38,7 +38,7 @@ struct Semester: Decodable {
 
 struct AttendanceAPIRequest: Encodable {
     let clientid: String = "JAYPEE"
-    let instituteid: String = "11IN1902J000001"
+    let instituteid: String
     let studentid: String
     let stynumber: String
     let registrationid: String

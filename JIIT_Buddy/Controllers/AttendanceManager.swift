@@ -8,7 +8,7 @@
 import Foundation
 
 
-func getAttendance(studentId: String, token: String, completion: @escaping (Result<Payload, Error>) -> Void) {
+func getAttendance(studentId: String, token: String, instituteid: String,completion: @escaping (Result<Payload, Error>) -> Void) {
     guard let url = URL(string: "https://webportal.jiit.ac.in:6011/StudentPortalAPI/StudentClassAttendance/getstudentInforegistrationforattendence") else {
         completion(.failure(NSError(domain: "Invalid URL", code: 0, userInfo: nil)))
         return
@@ -23,7 +23,7 @@ func getAttendance(studentId: String, token: String, completion: @escaping (Resu
     request.setValue("https://webportal.jiit.ac.in:6011", forHTTPHeaderField: "Origin")
     let body = [
         "clientid": "JAYPEE",
-        "instituteid": "11IN1902J000001",
+        "instituteid": instituteid,
         "studentid": studentId,
         "membertype": "S"
     ]
@@ -57,7 +57,7 @@ func getAttendance(studentId: String, token: String, completion: @escaping (Resu
 }
 
 
-func getSemesterAttendance(studentid: String, stynumber: String, registrationid: String, token: String, completionHandler: @escaping (Result<AttendanceAPIResponse, Error>) -> Void) {
+func getSemesterAttendance(studentid: String, stynumber: String, registrationid: String, token: String, instituteid: String, completionHandler: @escaping (Result<AttendanceAPIResponse, Error>) -> Void) {
     let url = URL(string: "https://webportal.jiit.ac.in:6011/StudentPortalAPI/StudentClassAttendance/getstudentattendancedetail")!
     let headers = [
         "Accept": "application/json",
@@ -67,7 +67,7 @@ func getSemesterAttendance(studentid: String, stynumber: String, registrationid:
         "Origin": "https://webportal.jiit.ac.in:6011",
         "User-Agent": "Thunder Client (https://www.thunderclient.com)"
     ]
-    let request = AttendanceAPIRequest(studentid: studentid, stynumber: stynumber, registrationid: registrationid)
+    let request = AttendanceAPIRequest(instituteid: instituteid, studentid: studentid, stynumber: stynumber, registrationid: registrationid)
     
     do {
         let jsonData = try JSONEncoder().encode(request)
@@ -138,7 +138,7 @@ func getSemesterAttendance(studentid: String, stynumber: String, registrationid:
     }
 }
 
-func getPercentageDetails(token: String, studentid: String, subjectid: String, registrationid: String, subjectcomponentids: [String], completion: @escaping (Result<AttendancePercentageDetails, Error>) -> Void) {
+func getPercentageDetails(token: String, studentid: String, subjectid: String, registrationid: String, instituteid: String, subjectcomponentids: [String], completion: @escaping (Result<AttendancePercentageDetails, Error>) -> Void) {
     let url = URL(string: "https://webportal.jiit.ac.in:6011/StudentPortalAPI/StudentClassAttendance/getstudentsubjectpersentage")!
     var request = URLRequest(url: url)
     let headers = [
@@ -156,7 +156,7 @@ func getPercentageDetails(token: String, studentid: String, subjectid: String, r
     
     let payload: [String: Any] = [
         "clientid": "JAYPEE",
-        "instituteid": "11IN1902J000001",
+        "instituteid": instituteid,
         "studentid": studentid,
         "subjectid": subjectid,
         "registrationid": registrationid,

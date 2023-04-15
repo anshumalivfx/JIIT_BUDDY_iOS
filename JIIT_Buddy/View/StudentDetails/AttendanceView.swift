@@ -10,6 +10,7 @@ import SwiftUI
 struct AttendanceView: View {
     var studentid: String
     var token: String
+    @AppStorage("instituteid") var instituteid = ""
     @State var showAttendanceDetails: Bool = false
     @State var stynumber: String = ""
     @State var headerList: String = ""
@@ -36,9 +37,10 @@ struct AttendanceView: View {
                     Menu {
                         ForEach(0..<semList.count) { index in
                             Button(action: {
+                                print("semList[selectedSemesterIndex].registrationid")
                                 selectedSemesterIndex = index
                                 attendanceDict = []
-                                getSemesterAttendance(studentid: studentid, stynumber: stynumber, registrationid: semList[selectedSemesterIndex].registrationid, token: token) { result in
+                                getSemesterAttendance(studentid: studentid, stynumber: stynumber, registrationid: semList[selectedSemesterIndex].registrationid, token: token, instituteid: instituteid) { result in
                                     switch result {
                                     case .success(let attendance):
                                         // Handle the retrieved attendance data
@@ -93,7 +95,7 @@ struct AttendanceView: View {
                                     }
                                         else {
                                         Button {
-                                            getPercentageDetails(token: token, studentid: studentid, subjectid: attendanceDict[i].subjectid, registrationid: registrationID, subjectcomponentids: [attendanceDict[i].lsubjectcomponentid, attendanceDict[i].tsubjectcomponentid, attendanceDict[i].psubjectcomponentid], completion: { result in
+                                            getPercentageDetails(token: token, studentid: studentid, subjectid: attendanceDict[i].subjectid, registrationid: registrationID, instituteid: instituteid, subjectcomponentids: [attendanceDict[i].lsubjectcomponentid, attendanceDict[i].tsubjectcomponentid, attendanceDict[i].psubjectcomponentid], completion: { result in
                                                 switch result {
                                                 case .success(let attendancePercentageDetails):
                                                     
@@ -131,7 +133,7 @@ struct AttendanceView: View {
                                                 
                                                 
                                                 
-                                                getPercentageDetails(token: token, studentid: studentid, subjectid: attendanceDict[i].subjectid, registrationid: registrationID, subjectcomponentids: [attendanceDict[i].lsubjectcomponentid, attendanceDict[i].tsubjectcomponentid, attendanceDict[i].psubjectcomponentid], completion: { result in
+                                                getPercentageDetails(token: token, studentid: studentid, subjectid: attendanceDict[i].subjectid, registrationid: registrationID, instituteid: instituteid, subjectcomponentids: [attendanceDict[i].lsubjectcomponentid, attendanceDict[i].tsubjectcomponentid, attendanceDict[i].psubjectcomponentid], completion: { result in
                                                     switch result {
                                                     case .success(let attendancePercentageDetails):
                                                         
@@ -173,7 +175,7 @@ struct AttendanceView: View {
         
         .onAppear {
             
-            getAttendance(studentId: studentid, token: token) { result in
+            getAttendance(studentId: studentid, token: token, instituteid: instituteid) { result in
                 loader = true
                 switch result {
                 case .success(let payload):

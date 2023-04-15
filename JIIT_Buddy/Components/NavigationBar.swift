@@ -20,7 +20,7 @@ struct NavigationBar: View {
                 Spacer()
                 
                 Button {
-                        isOn = true
+                    isOn.toggle()
                     
                 }
                 label: {

@@ -13,19 +13,24 @@ struct ContentView: View {
     @AppStorage("token") var tokenResponse = ""
     @AppStorage("clientid") var clientId = ""
     @AppStorage("memberid") var memberId = ""
+    @EnvironmentObject var networkMonitor: NetworkMonitor
     var body: some View {
-        if isAuthenticated {
-            MainPageView(memberid: memberId, clientId: clientId, tokenResponse: tokenResponse)
-        } else {
-            VStack {
-                ZStack(alignment: .bottom) {
-                    
-                    HomeView()
+        
+        if networkMonitor.isConnected {
+            if isAuthenticated {
+                MainPageView(memberid: memberId, clientId: clientId, tokenResponse: tokenResponse)
+            } else {
+                VStack {
+                    ZStack(alignment: .bottom) {
+                        HomeView()
+                    }
                 }
             }
         }
         
-        
+        else {
+            NoNetworkAccess()
+        }
     }
 }
 

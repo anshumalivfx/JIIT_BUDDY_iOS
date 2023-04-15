@@ -7,7 +7,7 @@
 
 import Foundation
 
-func getPersonalInformation(memberId: String, clientId: String, token: String, completion: @escaping (Result<PersonalInfoResponse, Error>) -> Void) {
+func getPersonalInformation(memberId: String, clientId: String, token: String, instituteid: String, completion: @escaping (Result<PersonalInfoResponse, Error>) -> Void) {
     // Set up the request URL
     let urlString = "https://webportal.jiit.ac.in:6011/StudentPortalAPI/studentpersinfo/getstudent-personalinformation"
     guard let url = URL(string: urlString) else {
@@ -22,7 +22,7 @@ func getPersonalInformation(memberId: String, clientId: String, token: String, c
     request.httpMethod = "POST"
 
     // Set up the request body
-    let payload = ["clientid": clientId, "memberid": memberId, "instituteid": "11IN1902J000001"]
+    let payload = ["clientid": clientId, "memberid": memberId, "instituteid": instituteid]
     guard let httpBody = try? JSONSerialization.data(withJSONObject: payload, options: []) else {
         completion(.failure(NSError(domain: "Invalid payload", code: 0, userInfo: nil)))
         return
