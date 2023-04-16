@@ -11,6 +11,7 @@ struct AttendanceView: View {
     var studentid: String
     var token: String
     @AppStorage("instituteid") var instituteid = ""
+    @AppStorage("attendancecriteria") var criteria: Double?
     @State var showAttendanceDetails: Bool = false
     @State var stynumber: String = ""
     @State var headerList: String = ""
@@ -25,6 +26,7 @@ struct AttendanceView: View {
     @State var registrationID: String = ""
     @State var attendanceSummary: [StudentAttdsummarylist] = []
     @State var totalClasses: [Int] = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+    @State var needToAttend: [Int] = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
     @State private var subjectIndex = 0
     var body: some View {
         ZStack {
@@ -112,7 +114,7 @@ struct AttendanceView: View {
                                             
                                             
                                             
-                                            AttendanceSheetView(attpercentage: "\(attendanceVal[i])", courseName: "\(attendanceDict[i].subjectcode)", totalClasses:totalClasses[i], TotalPres: attendanceDict[i].abseent, registrationId: registrationID, subjectComponentId: [attendanceDict[i].lsubjectcomponentid, attendanceDict[i].tsubjectcomponentid, attendanceDict[i].psubjectcomponentid],token: token, studentid: studentid, subjectid: attendanceDict[i].subjectid).onAppear{
+                                            AttendanceSheetView(attpercentage: "\(attendanceVal[i])", courseName: "\(attendanceDict[i].subjectcode)", totalClasses:totalClasses[i], TotalPres: attendanceDict[i].abseent, registrationId: registrationID, subjectComponentId: [attendanceDict[i].lsubjectcomponentid, attendanceDict[i].tsubjectcomponentid, attendanceDict[i].psubjectcomponentid],token: token, studentid: studentid, subjectid: attendanceDict[i].subjectid, classesNeededToAttend: String(needToAttend[i])).onAppear{
                                                 
                                                 totalClasses[i] = attendanceSummary.count
                                                 
@@ -133,6 +135,7 @@ struct AttendanceView: View {
                                                 
                                                 
                                                 
+                                                
                                                 getPercentageDetails(token: token, studentid: studentid, subjectid: attendanceDict[i].subjectid, registrationid: registrationID, instituteid: instituteid, subjectcomponentids: [attendanceDict[i].lsubjectcomponentid, attendanceDict[i].tsubjectcomponentid, attendanceDict[i].psubjectcomponentid], completion: { result in
                                                     switch result {
                                                     case .success(let attendancePercentageDetails):
@@ -145,6 +148,18 @@ struct AttendanceView: View {
                                                         print("Error: \(error.localizedDescription)")
                                                     }
                                                 })
+                                                
+                                                
+                                                let criteria = (self.criteria ?? 0.0)/100
+                                                
+                                                print(criteria)
+                                                
+                                                if criteria > attendanceVal[i]/100 {
+                                                    let classesAttended = Int(totalClasses[i] - attendanceDict[i].abseent)
+                                                    needToAttend[i] = Int((criteria * Double(totalClasses[i]) - Double(classesAttended)))
+                                                    print(needToAttend[i])
+                                                }
+                                                
                                                 
                                                 
                                                 
@@ -195,6 +210,8 @@ struct AttendanceView: View {
                     dismiss()
                 }
             }
+            
+            
             
         }
         .blurredSheet(.init(.thinMaterial), show: $showAttendanceDetails) {

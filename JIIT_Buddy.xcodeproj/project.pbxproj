@@ -33,6 +33,7 @@
 		7AAB42C029E49D1B006F8FCB /* EnumNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAB42BF29E49D1B006F8FCB /* EnumNetwork.swift */; };
 		7AAB42C229E56403006F8FCB /* MainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAB42C129E56403006F8FCB /* MainPageView.swift */; };
 		7AAB42C529E577FD006F8FCB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAB42C429E577FD006F8FCB /* Extensions.swift */; };
+		7AD2873D29EBED9C00986EF2 /* TextFieldAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2873C29EBED9C00986EF2 /* TextFieldAlertViewController.swift */; };
 		7AD8A02329E45D61003ACD0D /* JIIT_BuddyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8A02229E45D61003ACD0D /* JIIT_BuddyApp.swift */; };
 		7AD8A02529E45D61003ACD0D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8A02429E45D61003ACD0D /* ContentView.swift */; };
 		7AD8A02729E45D62003ACD0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AD8A02629E45D62003ACD0D /* Assets.xcassets */; };
@@ -92,6 +93,7 @@
 		7AAB42BF29E49D1B006F8FCB /* EnumNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumNetwork.swift; sourceTree = "<group>"; };
 		7AAB42C129E56403006F8FCB /* MainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
 		7AAB42C429E577FD006F8FCB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		7AD2873C29EBED9C00986EF2 /* TextFieldAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldAlertViewController.swift; sourceTree = "<group>"; };
 		7AD8A01F29E45D61003ACD0D /* JIIT_Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JIIT_Buddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AD8A02229E45D61003ACD0D /* JIIT_BuddyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JIIT_BuddyApp.swift; sourceTree = "<group>"; };
 		7AD8A02429E45D61003ACD0D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -204,6 +206,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		7AD2873B29EBED8100986EF2 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				7AD2873C29EBED9C00986EF2 /* TextFieldAlertViewController.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 		7AD8A01629E45D61003ACD0D = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +233,7 @@
 		7AD8A02129E45D61003ACD0D /* JIIT_Buddy */ = {
 			isa = PBXGroup;
 			children = (
+				7AD2873B29EBED8100986EF2 /* UIKit */,
 				7AE0A81129E86F4B00874E00 /* ObservableObjects */,
 				7A0FDDE329E5D99000692F45 /* Utils */,
 				7A0FDDDA29E5908600692F45 /* GlobalVariables */,
@@ -370,6 +381,7 @@
 			files = (
 				7AD8A02C29E45D62003ACD0D /* Persistence.swift in Sources */,
 				7AA18B0F29E48C6900BDF04B /* AuthManager.swift in Sources */,
+				7AD2873D29EBED9C00986EF2 /* TextFieldAlertViewController.swift in Sources */,
 				7AD8A03C29E46370003ACD0D /* HomeView.swift in Sources */,
 				7A0FDDDE29E5B9F600692F45 /* LoadingSpinner.swift in Sources */,
 				7A99756429E6A87E0062802D /* AttendanceView.swift in Sources */,
@@ -564,7 +576,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anshumali.JIIT-Buddy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -602,7 +614,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anshumali.JIIT-Buddy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

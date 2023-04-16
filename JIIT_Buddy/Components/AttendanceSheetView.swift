@@ -19,7 +19,9 @@ struct AttendanceSheetView: View {
     var token: String
     var studentid: String
     var subjectid: String
-
+    var classesNeededToAttend: String
+    
+    
     var body: some View {
         ZStack {
             Trapezoid()
@@ -30,6 +32,7 @@ struct AttendanceSheetView: View {
             HStack(alignment: .top) {
                 VStack {
                 Spacer()
+                    
                     Text(courseName)
                         .font(.footnote)
                         .foregroundColor(.white)
@@ -48,6 +51,9 @@ struct AttendanceSheetView: View {
                                 .foregroundColor(.white)
                                 .font(.system(size: 45, weight: .medium))
                     Spacer()
+                    Text("Need to Attend: \(classesNeededToAttend)")
+                        .font(.subheadline)
+                        .foregroundColor(.white)
                 }
                 
                 
@@ -61,7 +67,7 @@ struct AttendanceSheetView: View {
 
 struct AttendanceSheetView_Previews: PreviewProvider {
     static var previews: some View {
-        AttendanceSheetView(attpercentage: "40", courseName: "PROBABILITY AND RANDOM PROCESSES(15B11MA301)",totalClasses: 32, TotalPres: 14, registrationId: "J50505", subjectComponentId: ["Hello"], token: "", studentid: "", subjectid: "")
+        AttendanceSheetView(attpercentage: "40", courseName: "PROBABILITY AND RANDOM PROCESSES(15B11MA301)",totalClasses: 32, TotalPres: 14, registrationId: "J50505", subjectComponentId: ["Hello"], token: "", studentid: "", subjectid: "", classesNeededToAttend: "2")
     }
 }
 

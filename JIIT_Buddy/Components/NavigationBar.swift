@@ -19,16 +19,16 @@ struct NavigationBar: View {
                     .foregroundColor(.primary)
                 Spacer()
                 
-                Button {
-                    isOn.toggle()
-                    
-                }
-                label: {
-                    Image(systemName: "rectangle.portrait.and.arrow.right")
-                        .font(.system(size: 28))
-                        .frame(width: 44, height: 44, alignment: .trailing)
-                }
-                .buttonStyle(.plain)
+//                Button {
+//                    isOn.toggle()
+//                    
+//                }
+//                label: {
+//                    Image(systemName: "rectangle.portrait.and.arrow.right")
+//                        .font(.system(size: 28))
+//                        .frame(width: 44, height: 44, alignment: .trailing)
+//                }
+//                .buttonStyle(.plain)
                 
                 
 

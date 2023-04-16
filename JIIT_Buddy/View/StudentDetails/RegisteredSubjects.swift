@@ -94,7 +94,7 @@ struct RegisteredSubjects: View {
                 switch result {
                 case .success(let response):
                     semList = response.response.registrations
-                    
+                    print(semList)
                     loader = false
                     
                 case .failure(let error):

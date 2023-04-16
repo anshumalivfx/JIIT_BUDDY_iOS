@@ -25,7 +25,7 @@ func getStudentRegisteredSubjects(token: String, studentid: String, instituteid:
     
     
     let payload: [String: Any] = [
-        "instituteid": "11IN1902J000001",
+        "instituteid": instituteid,
         "studentid": studentid,
     ]
     let payloadData = try! JSONSerialization.data(withJSONObject: payload)

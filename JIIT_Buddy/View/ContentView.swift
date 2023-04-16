@@ -9,6 +9,14 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
+    init() {
+
+              UINavigationBar.appearance().setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+              UINavigationBar.appearance().shadowImage = UIImage()
+              UINavigationBar.appearance().isTranslucent = true
+              UINavigationBar.appearance().tintColor = .clear
+              UINavigationBar.appearance().backgroundColor = .clear
+         }
     @AppStorage("isAuthenticated") var isAuthenticated = false
     @AppStorage("token") var tokenResponse = ""
     @AppStorage("clientid") var clientId = ""
