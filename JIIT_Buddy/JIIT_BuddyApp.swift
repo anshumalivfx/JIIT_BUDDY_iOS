@@ -11,11 +11,13 @@ import SwiftUI
 struct JIIT_BuddyApp: App {
     let persistenceController = PersistenceController.shared
     @StateObject var networkMonitor = NetworkMonitor()
+    @StateObject var websiteChecker = WebsiteChecker(url: URL(string: "https://webportal.jiit.ac.in:6011/studentportal/#")!)
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
                 .environmentObject(networkMonitor)
+                .environmentObject(websiteChecker)
                 .preferredColorScheme(.dark)
         }
     }

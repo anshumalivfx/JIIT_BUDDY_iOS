@@ -176,9 +176,9 @@ class JSONNull: Codable, Hashable {
         return true
     }
 
-    public var hashValue: Int {
-        return 0
-    }
+    func hash(into hasher: inout Hasher) {
+            hasher.combine(0)
+        }
 
     public init() {}
 
@@ -239,9 +239,10 @@ class AttendancePercentageJSONNull: Codable, Hashable {
         return true
     }
 
-    public var hashValue: Int {
-        return 0
-    }
+    func hash(into hasher: inout Hasher) {
+            hasher.combine(0)
+        }
+
 
     public init() {}
 
@@ -258,14 +259,6 @@ class AttendancePercentageJSONNull: Codable, Hashable {
     }
 }
 
-struct AttendancePercentageRequest: Codable {
-    let clientid: String = "JAYPEE"
-    let instituteid: String = "11IN1902J000001"
-    let studentid: String
-    let subjectid: String
-    let registrationid: String
-    let cmpidkey: [Cmpidkey]
-}
 
 
 // MARK: - Cmpidkey

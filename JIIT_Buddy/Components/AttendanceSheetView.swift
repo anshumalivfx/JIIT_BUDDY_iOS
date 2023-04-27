@@ -65,13 +65,6 @@ struct AttendanceSheetView: View {
     }
 }
 
-struct AttendanceSheetView_Previews: PreviewProvider {
-    static var previews: some View {
-        AttendanceSheetView(attpercentage: "40", courseName: "PROBABILITY AND RANDOM PROCESSES(15B11MA301)",totalClasses: 32, TotalPres: 14, registrationId: "J50505", subjectComponentId: ["Hello"], token: "", studentid: "", subjectid: "", classesNeededToAttend: "2")
-    }
-}
-
-
 
 struct StrokeText: View {
     let text: String
@@ -91,3 +84,4 @@ struct StrokeText: View {
         }
     }
 }
+

@@ -17,6 +17,8 @@ struct HomeLoginView: View {
     @AppStorage("clientid") var clientId: String = ""
     @AppStorage("memberid") var memberid: String = ""
     @AppStorage("instituteid") var instituteid: String = ""
+    @AppStorage("userid") var userid: String = ""
+    @AppStorage("password") var userpassword: String = ""
     @State private var opacity = 0.0
     @State private var showAlert: Bool = false
 
@@ -84,10 +86,12 @@ struct HomeLoginView: View {
                 signInUser(rollno: self.rollno, password: self.password) { result in
                     switch result {
                     case .success(let user):
-                        
+                        self.userid = rollno
+                        self.userpassword = password
                         self.tokenResponse = user.response.regdata.token
                         self.clientId = user.response.regdata.clientid
                         self.memberid = user.response.regdata.memberid
+                        
                         token = user.response.regdata.token
                         clientid = user.response.regdata.clientid
                         memberid = user.response.regdata.memberid
@@ -141,4 +145,12 @@ struct HomeLoginView: View {
     
     
     
+}
+
+
+
+struct Login_Previews: PreviewProvider {
+    static var previews: some View {
+        HomeLoginView()
+    }
 }

@@ -10,9 +10,6 @@
 
 float calculateAttendance(float attendedClasses, float totalClasses){
     float attendance;
-    
     attendance = (attendedClasses/totalClasses)*100;
-    
-    
     return attendance;
 }

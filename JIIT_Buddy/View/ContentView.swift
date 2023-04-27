@@ -22,18 +22,26 @@ struct ContentView: View {
     @AppStorage("clientid") var clientId = ""
     @AppStorage("memberid") var memberId = ""
     @EnvironmentObject var networkMonitor: NetworkMonitor
+    
+    @EnvironmentObject var websiteChecker: WebsiteChecker
     var body: some View {
         
         if networkMonitor.isConnected {
-            if isAuthenticated {
-                MainPageView(memberid: memberId, clientId: clientId, tokenResponse: tokenResponse)
-            } else {
-                VStack {
-                    ZStack(alignment: .bottom) {
-                        HomeView()
+            if websiteChecker.isWebsiteWorking {
+                if isAuthenticated {
+                    MainPageView(memberid: memberId, clientId: clientId, tokenResponse: tokenResponse)
+                } else {
+                    VStack {
+                        ZStack(alignment: .bottom) {
+                            HomeView()
+                        }
                     }
                 }
+            } else {
+                WebsiteNotWorking()
             }
+            
+            
         }
         
         else {

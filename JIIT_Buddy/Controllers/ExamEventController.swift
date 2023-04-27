@@ -45,9 +45,7 @@ func getExamEventDetails(token: String, instituteid:String, registrationid: Stri
             return
         }
         
-        let jsonString = try?JSONSerialization.jsonObject(with: data, options: [])
         
-        print(jsonString)
         
         let decoder = JSONDecoder()
         do {

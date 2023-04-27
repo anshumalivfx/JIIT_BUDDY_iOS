@@ -12,16 +12,16 @@ struct ResponseStatus: Decodable {
     let identifier: String?
 }
 
-struct Qualification: Decodable {
-    let division: Int
-    let fullmarks: Int
-    let qualificationcode: String
-    let obtainedmarks: Int
-    let yearofpassing: Int
-    let grade: String?
-    let percentagemarks: Double
-    let boardname: String
-}
+//struct Qualification: Decodable {
+//    let division: Int
+//    let fullmarks: Int
+//    let qualificationcode: String
+//    let obtainedmarks: Int
+//    let yearofpassing: Int
+//    let grade: String?
+//    let percentagemarks: Double
+//    let boardname: String
+//}
 
 struct GeneralInformation: Decodable {
     let academicyear: String
@@ -47,7 +47,7 @@ struct PersonalInfoResponse: Decodable {
 }
 
 struct PersonalInfo: Decodable {
-    let qualification: [Qualification]
+//    let qualification: [Qualification]
     let generalinformation: GeneralInformation
 }
 

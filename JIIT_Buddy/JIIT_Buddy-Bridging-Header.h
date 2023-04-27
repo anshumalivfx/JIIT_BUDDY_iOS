@@ -3,3 +3,4 @@
 //
 
 #include "CalculateAttendance.h"
+#include <LocalAuthentication/LocalAuthentication.h>

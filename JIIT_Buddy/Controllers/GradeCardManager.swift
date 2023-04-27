@@ -47,7 +47,6 @@ func getGradeCard(token: String, studentid: String, instituteid:String, registra
             return
         }
         
-        let jsonString = try?JSONSerialization.jsonObject(with: data, options: [])
         
         let decoder = JSONDecoder()
         do {

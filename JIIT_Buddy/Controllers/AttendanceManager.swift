@@ -94,8 +94,7 @@ func getSemesterAttendance(studentid: String, stynumber: String, registrationid:
             
             
             
-            do {
-                
+          
                 let decoder = JSONDecoder()
                     do {
                         decoder.keyDecodingStrategy = .convertFromSnakeCase
@@ -127,10 +126,7 @@ func getSemesterAttendance(studentid: String, stynumber: String, registrationid:
 //                    }
 //
 //                }
-                
-            } catch let error {
-                completionHandler(.failure(error))
-            }
+        
         }
         task.resume()
     } catch {

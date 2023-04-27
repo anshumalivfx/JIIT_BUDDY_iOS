@@ -37,7 +37,7 @@ struct AttendanceView: View {
             else {
                 VStack {
                     Menu {
-                        ForEach(0..<semList.count) { index in
+                        ForEach(0..<Int(semList.count)) { index in
                             Button(action: {
                                 print("semList[selectedSemesterIndex].registrationid")
                                 selectedSemesterIndex = index

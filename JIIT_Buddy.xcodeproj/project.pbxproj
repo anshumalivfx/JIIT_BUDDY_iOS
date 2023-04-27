@@ -12,6 +12,7 @@
 		7A0FDDE029E5CC9D00692F45 /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0FDDDF29E5CC9D00692F45 /* Blur.swift */; };
 		7A0FDDE229E5CD3700692F45 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0FDDE129E5CD3700692F45 /* NavigationBar.swift */; };
 		7A0FDDE529E5D9B400692F45 /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0FDDE429E5D9B400692F45 /* Shapes.swift */; };
+		7A309F9929EEF82B008EE05E /* WebsiteNotWorking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A309F9829EEF82B008EE05E /* WebsiteNotWorking.swift */; };
 		7A536EA629E87E3800A95ED5 /* Extension+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A536EA529E87E3700A95ED5 /* Extension+View.swift */; };
 		7A68A59C29E48442007B1E13 /* LoginPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A68A59B29E48442007B1E13 /* LoginPageView.swift */; };
 		7A776A4829E9C42700F61E1F /* AttendanceSummarySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A776A4729E9C42700F61E1F /* AttendanceSummarySheet.swift */; };
@@ -64,12 +65,26 @@
 		7AEE5EF729EABAE000B80107 /* Internet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AEE5EF629EABAE000B80107 /* Internet.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7AE41A3029EE85B500330FEA /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		7A0FDDDB29E5909500692F45 /* MainVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVariables.swift; sourceTree = "<group>"; };
 		7A0FDDDD29E5B9F600692F45 /* LoadingSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingSpinner.swift; sourceTree = "<group>"; };
 		7A0FDDDF29E5CC9D00692F45 /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
 		7A0FDDE129E5CD3700692F45 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		7A0FDDE429E5D9B400692F45 /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
+		7A309F9829EEF82B008EE05E /* WebsiteNotWorking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteNotWorking.swift; sourceTree = "<group>"; };
 		7A536EA529E87E3700A95ED5 /* Extension+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+View.swift"; sourceTree = "<group>"; };
 		7A68A59B29E48442007B1E13 /* LoginPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageView.swift; sourceTree = "<group>"; };
 		7A776A4729E9C42700F61E1F /* AttendanceSummarySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceSummarySheet.swift; sourceTree = "<group>"; };
@@ -93,6 +108,7 @@
 		7AAB42BF29E49D1B006F8FCB /* EnumNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumNetwork.swift; sourceTree = "<group>"; };
 		7AAB42C129E56403006F8FCB /* MainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
 		7AAB42C429E577FD006F8FCB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		7ABB926629F8192B009451D1 /* JIIT-Buddy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "JIIT-Buddy-Info.plist"; sourceTree = SOURCE_ROOT; };
 		7AD2873C29EBED9C00986EF2 /* TextFieldAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldAlertViewController.swift; sourceTree = "<group>"; };
 		7AD8A01F29E45D61003ACD0D /* JIIT_Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JIIT_Buddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AD8A02229E45D61003ACD0D /* JIIT_BuddyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JIIT_BuddyApp.swift; sourceTree = "<group>"; };
@@ -107,6 +123,8 @@
 		7AE0A80F29E86EDC00874E00 /* DonutChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutChart.swift; sourceTree = "<group>"; };
 		7AE0A81229E86F6100874E00 /* ChartDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDataController.swift; sourceTree = "<group>"; };
 		7AE0A81429E86F9500874E00 /* ChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
+		7AE41A1C29EE85B400330FEA /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		7AE41A1E29EE85B400330FEA /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		7AEE5ED829EA53EA00B80107 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		7AEE5EDA29EA540900B80107 /* RegistrationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationModel.swift; sourceTree = "<group>"; };
 		7AEE5EDC29EA64A800B80107 /* SubjectsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsCard.swift; sourceTree = "<group>"; };
@@ -218,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				7AD8A02129E45D61003ACD0D /* JIIT_Buddy */,
+				7AE41A1B29EE85B400330FEA /* Frameworks */,
 				7AD8A02029E45D61003ACD0D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -233,6 +252,7 @@
 		7AD8A02129E45D61003ACD0D /* JIIT_Buddy */ = {
 			isa = PBXGroup;
 			children = (
+				7ABB926629F8192B009451D1 /* JIIT-Buddy-Info.plist */,
 				7AD2873B29EBED8100986EF2 /* UIKit */,
 				7AE0A81129E86F4B00874E00 /* ObservableObjects */,
 				7A0FDDE329E5D99000692F45 /* Utils */,
@@ -272,6 +292,7 @@
 				7A68A59B29E48442007B1E13 /* LoginPageView.swift */,
 				7AAB42C129E56403006F8FCB /* MainPageView.swift */,
 				7AEE5EF429EABA9900B80107 /* NoInternetAccess.swift */,
+				7A309F9829EEF82B008EE05E /* WebsiteNotWorking.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -304,6 +325,15 @@
 			path = ObservableObjects;
 			sourceTree = "<group>";
 		};
+		7AE41A1B29EE85B400330FEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7AE41A1C29EE85B400330FEA /* WidgetKit.framework */,
+				7AE41A1E29EE85B400330FEA /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -314,6 +344,7 @@
 				7AD8A01B29E45D61003ACD0D /* Sources */,
 				7AD8A01C29E45D61003ACD0D /* Frameworks */,
 				7AD8A01D29E45D61003ACD0D /* Resources */,
+				7AE41A3029EE85B500330FEA /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -428,6 +459,7 @@
 				7A776A5329E9DC6B00F61E1F /* StudentResult.swift in Sources */,
 				7A68A59C29E48442007B1E13 /* LoginPageView.swift in Sources */,
 				7AEE5EEF29EAA41700B80107 /* ExaminationScheduleView.swift in Sources */,
+				7A309F9929EEF82B008EE05E /* WebsiteNotWorking.swift in Sources */,
 				7AEE5EDB29EA540900B80107 /* RegistrationModel.swift in Sources */,
 				7AEE5EF129EAA9E300B80107 /* ExamEventModel.swift in Sources */,
 				7AEE5EF729EABAE000B80107 /* Internet.swift in Sources */,
@@ -559,13 +591,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"JIIT_Buddy/Preview Content\"";
 				DEVELOPMENT_TEAM = 9V43N6T968;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "JIIT-Buddy-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "JIIT BUDDY";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We use this to authenticate to app";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -576,7 +610,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.3.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anshumali.JIIT-Buddy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -597,13 +631,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"JIIT_Buddy/Preview Content\"";
 				DEVELOPMENT_TEAM = 9V43N6T968;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "JIIT-Buddy-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "JIIT BUDDY";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We use this to authenticate to app";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -614,7 +650,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.3.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anshumali.JIIT-Buddy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
