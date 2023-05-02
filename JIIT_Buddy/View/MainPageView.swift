@@ -175,7 +175,7 @@ struct MainPageView: View {
                             
                             Spacer()
                             
-                            
+                    
                             
                             Text("Anshumali Karna's love-infused creation ❤️")
                                 .foregroundColor(.white.opacity(0.8))
@@ -278,7 +278,7 @@ struct MainPageView: View {
                         }))
                     })
                     
-                    .blurredSheet(.init(.ultraThinMaterial), show: $showAttendance, onDismiss: {
+                    .blurredSheet(.init(.thinMaterial), show: $showAttendance, onDismiss: {
                         
                     }, content: {
                         AttendanceView(studentid: memberid, token: token)

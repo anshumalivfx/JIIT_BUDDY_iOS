@@ -21,6 +21,8 @@
 		7A776A5129E9D90A00F61E1F /* ResultCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A776A5029E9D90A00F61E1F /* ResultCard.swift */; };
 		7A776A5329E9DC6B00F61E1F /* StudentResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A776A5229E9DC6B00F61E1F /* StudentResult.swift */; };
 		7A776A5529EA446600F61E1F /* RegisteredSubjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A776A5429EA446600F61E1F /* RegisteredSubjects.swift */; };
+		7A84289029FD39CC00C65871 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84288F29FD39CC00C65871 /* TabView.swift */; };
+		7A84289229FD43FA00C65871 /* ExamSittingComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84289129FD43FA00C65871 /* ExamSittingComponent.swift */; };
 		7A99755F29E674040062802D /* CalculateAttendance.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A99755E29E674040062802D /* CalculateAttendance.c */; };
 		7A99756129E6774C0062802D /* SelectComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A99756029E6774C0062802D /* SelectComponent.swift */; };
 		7A99756429E6A87E0062802D /* AttendanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A99756329E6A87E0062802D /* AttendanceView.swift */; };
@@ -34,6 +36,8 @@
 		7AAB42C029E49D1B006F8FCB /* EnumNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAB42BF29E49D1B006F8FCB /* EnumNetwork.swift */; };
 		7AAB42C229E56403006F8FCB /* MainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAB42C129E56403006F8FCB /* MainPageView.swift */; };
 		7AAB42C529E577FD006F8FCB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAB42C429E577FD006F8FCB /* Extensions.swift */; };
+		7AC22E282A0172B600A5943B /* ExamSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC22E272A0172B600A5943B /* ExamSchedule.swift */; };
+		7AC22E2A2A01743D00A5943B /* ExamScheduleManagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC22E292A01743D00A5943B /* ExamScheduleManagerController.swift */; };
 		7AD2873D29EBED9C00986EF2 /* TextFieldAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2873C29EBED9C00986EF2 /* TextFieldAlertViewController.swift */; };
 		7AD8A02329E45D61003ACD0D /* JIIT_BuddyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8A02229E45D61003ACD0D /* JIIT_BuddyApp.swift */; };
 		7AD8A02529E45D61003ACD0D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8A02429E45D61003ACD0D /* ContentView.swift */; };
@@ -93,6 +97,8 @@
 		7A776A5029E9D90A00F61E1F /* ResultCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCard.swift; sourceTree = "<group>"; };
 		7A776A5229E9DC6B00F61E1F /* StudentResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentResult.swift; sourceTree = "<group>"; };
 		7A776A5429EA446600F61E1F /* RegisteredSubjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredSubjects.swift; sourceTree = "<group>"; };
+		7A84288F29FD39CC00C65871 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		7A84289129FD43FA00C65871 /* ExamSittingComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamSittingComponent.swift; sourceTree = "<group>"; };
 		7A99755C29E674040062802D /* JIIT_Buddy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JIIT_Buddy-Bridging-Header.h"; sourceTree = "<group>"; };
 		7A99755D29E674040062802D /* CalculateAttendance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculateAttendance.h; sourceTree = "<group>"; };
 		7A99755E29E674040062802D /* CalculateAttendance.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = CalculateAttendance.c; sourceTree = "<group>"; };
@@ -109,6 +115,8 @@
 		7AAB42C129E56403006F8FCB /* MainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
 		7AAB42C429E577FD006F8FCB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7ABB926629F8192B009451D1 /* JIIT-Buddy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "JIIT-Buddy-Info.plist"; sourceTree = SOURCE_ROOT; };
+		7AC22E272A0172B600A5943B /* ExamSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamSchedule.swift; sourceTree = "<group>"; };
+		7AC22E292A01743D00A5943B /* ExamScheduleManagerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamScheduleManagerController.swift; sourceTree = "<group>"; };
 		7AD2873C29EBED9C00986EF2 /* TextFieldAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldAlertViewController.swift; sourceTree = "<group>"; };
 		7AD8A01F29E45D61003ACD0D /* JIIT_Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JIIT_Buddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AD8A02229E45D61003ACD0D /* JIIT_BuddyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JIIT_BuddyApp.swift; sourceTree = "<group>"; };
@@ -170,6 +178,21 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		7A5F64E92A0180A20008D145 /* VentHouse */ = {
+			isa = PBXGroup;
+			children = (
+				7A5F64EA2A0180A90008D145 /* Views */,
+			);
+			path = VentHouse;
+			sourceTree = "<group>";
+		};
+		7A5F64EA2A0180A90008D145 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		7A99756229E6A86A0062802D /* StudentDetails */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +218,7 @@
 				7AEE5EE429EA849400B80107 /* GradeCardManager.swift */,
 				7AEE5EE829EA9E7E00B80107 /* EventmarksManagar.swift */,
 				7AEE5EF229EAAA3100B80107 /* ExamEventController.swift */,
+				7AC22E292A01743D00A5943B /* ExamScheduleManagerController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -211,6 +235,7 @@
 				7AEE5EDA29EA540900B80107 /* RegistrationModel.swift */,
 				7AEE5EE229EA846500B80107 /* GradeCardModel.swift */,
 				7AEE5EF029EAA9E300B80107 /* ExamEventModel.swift */,
+				7AC22E272A0172B600A5943B /* ExamSchedule.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -252,6 +277,7 @@
 		7AD8A02129E45D61003ACD0D /* JIIT_Buddy */ = {
 			isa = PBXGroup;
 			children = (
+				7A5F64E92A0180A20008D145 /* VentHouse */,
 				7ABB926629F8192B009451D1 /* JIIT-Buddy-Info.plist */,
 				7AD2873B29EBED8100986EF2 /* UIKit */,
 				7AE0A81129E86F4B00874E00 /* ObservableObjects */,
@@ -293,6 +319,7 @@
 				7AAB42C129E56403006F8FCB /* MainPageView.swift */,
 				7AEE5EF429EABA9900B80107 /* NoInternetAccess.swift */,
 				7A309F9829EEF82B008EE05E /* WebsiteNotWorking.swift */,
+				7A84288F29FD39CC00C65871 /* TabView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -312,6 +339,7 @@
 				7AEE5EDC29EA64A800B80107 /* SubjectsCard.swift */,
 				7AEE5EE629EA89E900B80107 /* GradeCard.swift */,
 				7AEE5EEA29EAA01F00B80107 /* EventMarksViewer.swift */,
+				7A84289129FD43FA00C65871 /* ExamSittingComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -410,12 +438,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A84289029FD39CC00C65871 /* TabView.swift in Sources */,
 				7AD8A02C29E45D62003ACD0D /* Persistence.swift in Sources */,
 				7AA18B0F29E48C6900BDF04B /* AuthManager.swift in Sources */,
 				7AD2873D29EBED9C00986EF2 /* TextFieldAlertViewController.swift in Sources */,
 				7AD8A03C29E46370003ACD0D /* HomeView.swift in Sources */,
 				7A0FDDDE29E5B9F600692F45 /* LoadingSpinner.swift in Sources */,
 				7A99756429E6A87E0062802D /* AttendanceView.swift in Sources */,
+				7AC22E2A2A01743D00A5943B /* ExamScheduleManagerController.swift in Sources */,
 				7AEE5EE129EA732D00B80107 /* GetUserData.swift in Sources */,
 				7AD8A03A29E46060003ACD0D /* TextFieldLogin.swift in Sources */,
 				7AEE5EEB29EAA01F00B80107 /* EventMarksViewer.swift in Sources */,
@@ -454,6 +484,7 @@
 				7AEE5EE729EA89E900B80107 /* GradeCard.swift in Sources */,
 				7AD8A02329E45D61003ACD0D /* JIIT_BuddyApp.swift in Sources */,
 				7AAB42C029E49D1B006F8FCB /* EnumNetwork.swift in Sources */,
+				7AC22E282A0172B600A5943B /* ExamSchedule.swift in Sources */,
 				7AAB42BC29E49409006F8FCB /* UserDataModel.swift in Sources */,
 				7A99756A29E6C3900062802D /* AttendanceSheetView.swift in Sources */,
 				7A776A5329E9DC6B00F61E1F /* StudentResult.swift in Sources */,
@@ -462,6 +493,7 @@
 				7A309F9929EEF82B008EE05E /* WebsiteNotWorking.swift in Sources */,
 				7AEE5EDB29EA540900B80107 /* RegistrationModel.swift in Sources */,
 				7AEE5EF129EAA9E300B80107 /* ExamEventModel.swift in Sources */,
+				7A84289229FD43FA00C65871 /* ExamSittingComponent.swift in Sources */,
 				7AEE5EF729EABAE000B80107 /* Internet.swift in Sources */,
 				7A0FDDE229E5CD3700692F45 /* NavigationBar.swift in Sources */,
 			);

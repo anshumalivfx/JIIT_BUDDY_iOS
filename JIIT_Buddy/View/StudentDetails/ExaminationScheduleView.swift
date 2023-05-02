@@ -23,6 +23,8 @@ struct ExaminationScheduleView: View {
     @State var showExamList: Bool = false
     @State var examEvent: [Examevent] = []
     @State var selectedExamIndex: Int = 0
+    
+    @State var examScheduleData: [ExamSchedule] = []
     var body: some View {
         VStack {
             HStack {
@@ -36,6 +38,7 @@ struct ExaminationScheduleView: View {
                             Button(action: {
                                 showExamList = false
                                 examEvent = []
+                                examScheduleData = []
                                 selectedSemesterIndex = index
                                 getExamEventDetails(token: token, instituteid: instituteid, registrationid: semList[index].registrationid) { result in
                                     
@@ -87,8 +90,17 @@ struct ExaminationScheduleView: View {
                                 ForEach(0..<examEvent.count) { index in
                                     
                                     Button(action: {
+                                        examScheduleData = []
                                         selectedExamIndex = index
-                                        
+                                        requestExamSchedule(token: token, memberid: studentid, instituteid: instituteid, exameventid: examEvent[index].exameventid ?? "", registrationid: semList[selectedSemesterIndex].registrationid) { success in
+                                            
+                                            switch success {
+                                            case .success(let response):
+                                                examScheduleData = response.response.subjectinfo
+                                            case .failure(let error):
+                                                print("\(error)")
+                                            }
+                                        }
                                     })
                                     {
                                         Text(examEvent[index].exameventdesc ?? "NULL")
@@ -123,6 +135,16 @@ struct ExaminationScheduleView: View {
             }
             .padding(.all)
             Spacer()
+            
+            if examScheduleData.isEmpty {
+                Text("Nothing Selected")
+                    .foregroundColor(.white)
+            } else {
+                ForEach(0..<examScheduleData.count){ index in
+                    ExamSittingComponent(subjectName: examScheduleData[index].subject, date: examScheduleData[index].examDate, time: examScheduleData[index].examTime, room: examScheduleData[index].roomNumber == "" ? "NA" : examScheduleData[index].roomNumber, seatNumber: examScheduleData[index].seatNumber == "" ? "NA" : examScheduleData[index].seatNumber )
+                }
+            }
+            
         }
         
         .onAppear {
