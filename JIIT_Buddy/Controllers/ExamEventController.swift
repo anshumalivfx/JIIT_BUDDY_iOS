@@ -17,7 +17,6 @@ func getExamEventDetails(token: String, instituteid:String, registrationid: Stri
         "Content-Type": "application/json",
         "Host": "webportal.jiit.ac.in:6011",
         "Origin": "https://webportal.jiit.ac.in:6011",
-        "User-Agent": "Thunder Client (https://www.thunderclient.com)"
     ]
     request.httpMethod = "POST"
     request.allHTTPHeaderFields = headers

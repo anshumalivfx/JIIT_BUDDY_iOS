@@ -15,7 +15,11 @@ extension View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background{
                     Rectangle()
-                        .fill(style)
+//                        .fill(style)
+                        .opacity(0)
+                        .backgroundBlur(radius: 15, opaque: true)
+                    
+                        
                         .ignoresSafeArea(.container, edges: .all)
                 }
         }

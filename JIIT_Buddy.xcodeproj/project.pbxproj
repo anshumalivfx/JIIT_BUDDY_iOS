@@ -14,6 +14,10 @@
 		7A0FDDE529E5D9B400692F45 /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0FDDE429E5D9B400692F45 /* Shapes.swift */; };
 		7A309F9929EEF82B008EE05E /* WebsiteNotWorking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A309F9829EEF82B008EE05E /* WebsiteNotWorking.swift */; };
 		7A536EA629E87E3800A95ED5 /* Extension+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A536EA529E87E3700A95ED5 /* Extension+View.swift */; };
+		7A54C8082A0214110071ACBD /* VentHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A54C8072A0214110071ACBD /* VentHomeView.swift */; };
+		7A54C80B2A0214A20071ACBD /* NavigationBarVentHouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A54C80A2A0214A20071ACBD /* NavigationBarVentHouse.swift */; };
+		7A682AEE2A0FE93500C59EA8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A682AED2A0FE93500C59EA8 /* AppDelegate.m */; };
+		7A682AF22A0FED3F00C59EA8 /* FirebaseApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A682AF12A0FED3F00C59EA8 /* FirebaseApp.m */; };
 		7A68A59C29E48442007B1E13 /* LoginPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A68A59B29E48442007B1E13 /* LoginPageView.swift */; };
 		7A776A4829E9C42700F61E1F /* AttendanceSummarySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A776A4729E9C42700F61E1F /* AttendanceSummarySheet.swift */; };
 		7A776A4D29E9D1B800F61E1F /* StudentResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A776A4C29E9D1B700F61E1F /* StudentResultModel.swift */; };
@@ -21,6 +25,7 @@
 		7A776A5129E9D90A00F61E1F /* ResultCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A776A5029E9D90A00F61E1F /* ResultCard.swift */; };
 		7A776A5329E9DC6B00F61E1F /* StudentResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A776A5229E9DC6B00F61E1F /* StudentResult.swift */; };
 		7A776A5529EA446600F61E1F /* RegisteredSubjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A776A5429EA446600F61E1F /* RegisteredSubjects.swift */; };
+		7A80FB7B2A0FDCAA0082102E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A80FB7A2A0FDCAA0082102E /* GoogleService-Info.plist */; };
 		7A84289029FD39CC00C65871 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84288F29FD39CC00C65871 /* TabView.swift */; };
 		7A84289229FD43FA00C65871 /* ExamSittingComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84289129FD43FA00C65871 /* ExamSittingComponent.swift */; };
 		7A99755F29E674040062802D /* CalculateAttendance.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A99755E29E674040062802D /* CalculateAttendance.c */; };
@@ -67,6 +72,7 @@
 		7AEE5EF329EAAA3100B80107 /* ExamEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AEE5EF229EAAA3100B80107 /* ExamEventController.swift */; };
 		7AEE5EF529EABA9900B80107 /* NoInternetAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AEE5EF429EABA9900B80107 /* NoInternetAccess.swift */; };
 		7AEE5EF729EABAE000B80107 /* Internet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AEE5EF629EABAE000B80107 /* Internet.swift */; };
+		FB51A6D9BCA0E9B7064FF0E9 /* Pods_JIIT_Buddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD991183B7C5153114479DC3 /* Pods_JIIT_Buddy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -83,6 +89,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		18ED4A4A949DCC13D2FFE3B0 /* Pods-JIIT_Buddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JIIT_Buddy.debug.xcconfig"; path = "Target Support Files/Pods-JIIT_Buddy/Pods-JIIT_Buddy.debug.xcconfig"; sourceTree = "<group>"; };
 		7A0FDDDB29E5909500692F45 /* MainVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVariables.swift; sourceTree = "<group>"; };
 		7A0FDDDD29E5B9F600692F45 /* LoadingSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingSpinner.swift; sourceTree = "<group>"; };
 		7A0FDDDF29E5CC9D00692F45 /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
@@ -90,6 +97,12 @@
 		7A0FDDE429E5D9B400692F45 /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
 		7A309F9829EEF82B008EE05E /* WebsiteNotWorking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteNotWorking.swift; sourceTree = "<group>"; };
 		7A536EA529E87E3700A95ED5 /* Extension+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+View.swift"; sourceTree = "<group>"; };
+		7A54C8072A0214110071ACBD /* VentHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentHomeView.swift; sourceTree = "<group>"; };
+		7A54C80A2A0214A20071ACBD /* NavigationBarVentHouse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarVentHouse.swift; sourceTree = "<group>"; };
+		7A682AEC2A0FE93500C59EA8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7A682AED2A0FE93500C59EA8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7A682AF12A0FED3F00C59EA8 /* FirebaseApp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirebaseApp.m; sourceTree = "<group>"; };
+		7A682AF32A0FED4D00C59EA8 /* FirebaseApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirebaseApp.h; sourceTree = "<group>"; };
 		7A68A59B29E48442007B1E13 /* LoginPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageView.swift; sourceTree = "<group>"; };
 		7A776A4729E9C42700F61E1F /* AttendanceSummarySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceSummarySheet.swift; sourceTree = "<group>"; };
 		7A776A4C29E9D1B700F61E1F /* StudentResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentResultModel.swift; sourceTree = "<group>"; };
@@ -97,6 +110,7 @@
 		7A776A5029E9D90A00F61E1F /* ResultCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCard.swift; sourceTree = "<group>"; };
 		7A776A5229E9DC6B00F61E1F /* StudentResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentResult.swift; sourceTree = "<group>"; };
 		7A776A5429EA446600F61E1F /* RegisteredSubjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredSubjects.swift; sourceTree = "<group>"; };
+		7A80FB7A2A0FDCAA0082102E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7A84288F29FD39CC00C65871 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		7A84289129FD43FA00C65871 /* ExamSittingComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamSittingComponent.swift; sourceTree = "<group>"; };
 		7A99755C29E674040062802D /* JIIT_Buddy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JIIT_Buddy-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -149,6 +163,8 @@
 		7AEE5EF229EAAA3100B80107 /* ExamEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamEventController.swift; sourceTree = "<group>"; };
 		7AEE5EF429EABA9900B80107 /* NoInternetAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoInternetAccess.swift; sourceTree = "<group>"; };
 		7AEE5EF629EABAE000B80107 /* Internet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Internet.swift; sourceTree = "<group>"; };
+		85F95BED000AD6E614E707E2 /* Pods-JIIT_Buddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JIIT_Buddy.release.xcconfig"; path = "Target Support Files/Pods-JIIT_Buddy/Pods-JIIT_Buddy.release.xcconfig"; sourceTree = "<group>"; };
+		FD991183B7C5153114479DC3 /* Pods_JIIT_Buddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JIIT_Buddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +172,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB51A6D9BCA0E9B7064FF0E9 /* Pods_JIIT_Buddy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,9 +195,18 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		7A54C8092A0214860071ACBD /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7A54C80A2A0214A20071ACBD /* NavigationBarVentHouse.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		7A5F64E92A0180A20008D145 /* VentHouse */ = {
 			isa = PBXGroup;
 			children = (
+				7A54C8092A0214860071ACBD /* Components */,
 				7A5F64EA2A0180A90008D145 /* Views */,
 			);
 			path = VentHouse;
@@ -189,8 +215,26 @@
 		7A5F64EA2A0180A90008D145 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7A54C8072A0214110071ACBD /* VentHomeView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		7A682AEF2A0FECF800C59EA8 /* FirebaseObjc */ = {
+			isa = PBXGroup;
+			children = (
+				7A682AF02A0FED0400C59EA8 /* Headers */,
+				7A682AF12A0FED3F00C59EA8 /* FirebaseApp.m */,
+			);
+			path = FirebaseObjc;
+			sourceTree = "<group>";
+		};
+		7A682AF02A0FED0400C59EA8 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				7A682AF32A0FED4D00C59EA8 /* FirebaseApp.h */,
+			);
+			path = Headers;
 			sourceTree = "<group>";
 		};
 		7A99756229E6A86A0062802D /* StudentDetails */ = {
@@ -263,6 +307,7 @@
 				7AD8A02129E45D61003ACD0D /* JIIT_Buddy */,
 				7AE41A1B29EE85B400330FEA /* Frameworks */,
 				7AD8A02029E45D61003ACD0D /* Products */,
+				D723DE1AEE6B1EE8AF9A0CA0 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -277,6 +322,8 @@
 		7AD8A02129E45D61003ACD0D /* JIIT_Buddy */ = {
 			isa = PBXGroup;
 			children = (
+				7A682AEF2A0FECF800C59EA8 /* FirebaseObjc */,
+				7A80FB7A2A0FDCAA0082102E /* GoogleService-Info.plist */,
 				7A5F64E92A0180A20008D145 /* VentHouse */,
 				7ABB926629F8192B009451D1 /* JIIT-Buddy-Info.plist */,
 				7AD2873B29EBED8100986EF2 /* UIKit */,
@@ -296,6 +343,8 @@
 				7A99755D29E674040062802D /* CalculateAttendance.h */,
 				7A99755E29E674040062802D /* CalculateAttendance.c */,
 				7A99755C29E674040062802D /* JIIT_Buddy-Bridging-Header.h */,
+				7A682AEC2A0FE93500C59EA8 /* AppDelegate.h */,
+				7A682AED2A0FE93500C59EA8 /* AppDelegate.m */,
 			);
 			path = JIIT_Buddy;
 			sourceTree = "<group>";
@@ -358,8 +407,18 @@
 			children = (
 				7AE41A1C29EE85B400330FEA /* WidgetKit.framework */,
 				7AE41A1E29EE85B400330FEA /* SwiftUI.framework */,
+				FD991183B7C5153114479DC3 /* Pods_JIIT_Buddy.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D723DE1AEE6B1EE8AF9A0CA0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				18ED4A4A949DCC13D2FFE3B0 /* Pods-JIIT_Buddy.debug.xcconfig */,
+				85F95BED000AD6E614E707E2 /* Pods-JIIT_Buddy.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,18 +428,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7AD8A03229E45D62003ACD0D /* Build configuration list for PBXNativeTarget "JIIT_Buddy" */;
 			buildPhases = (
+				8137575EE77E3F742CB6F68A /* [CP] Check Pods Manifest.lock */,
 				7AD8A01B29E45D61003ACD0D /* Sources */,
 				7AD8A01C29E45D61003ACD0D /* Frameworks */,
 				7AD8A01D29E45D61003ACD0D /* Resources */,
 				7AE41A3029EE85B500330FEA /* Embed Foundation Extensions */,
+				484D5CE5F3E837951F18885B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = JIIT_Buddy;
-			packageProductDependencies = (
-			);
 			productName = JIIT_Buddy;
 			productReference = 7AD8A01F29E45D61003ACD0D /* JIIT_Buddy.app */;
 			productType = "com.apple.product-type.application";
@@ -410,8 +469,6 @@
 				Base,
 			);
 			mainGroup = 7AD8A01629E45D61003ACD0D;
-			packageReferences = (
-			);
 			productRefGroup = 7AD8A02029E45D61003ACD0D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -427,11 +484,54 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AD8A02A29E45D62003ACD0D /* Preview Assets.xcassets in Resources */,
+				7A80FB7B2A0FDCAA0082102E /* GoogleService-Info.plist in Resources */,
 				7AD8A02729E45D62003ACD0D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		484D5CE5F3E837951F18885B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JIIT_Buddy/Pods-JIIT_Buddy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JIIT_Buddy/Pods-JIIT_Buddy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JIIT_Buddy/Pods-JIIT_Buddy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8137575EE77E3F742CB6F68A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JIIT_Buddy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7AD8A01B29E45D61003ACD0D /* Sources */ = {
@@ -443,12 +543,14 @@
 				7AA18B0F29E48C6900BDF04B /* AuthManager.swift in Sources */,
 				7AD2873D29EBED9C00986EF2 /* TextFieldAlertViewController.swift in Sources */,
 				7AD8A03C29E46370003ACD0D /* HomeView.swift in Sources */,
+				7A54C80B2A0214A20071ACBD /* NavigationBarVentHouse.swift in Sources */,
 				7A0FDDDE29E5B9F600692F45 /* LoadingSpinner.swift in Sources */,
 				7A99756429E6A87E0062802D /* AttendanceView.swift in Sources */,
 				7AC22E2A2A01743D00A5943B /* ExamScheduleManagerController.swift in Sources */,
 				7AEE5EE129EA732D00B80107 /* GetUserData.swift in Sources */,
 				7AD8A03A29E46060003ACD0D /* TextFieldLogin.swift in Sources */,
 				7AEE5EEB29EAA01F00B80107 /* EventMarksViewer.swift in Sources */,
+				7A682AEE2A0FE93500C59EA8 /* AppDelegate.m in Sources */,
 				7AAB42BE29E49728006F8FCB /* FetchDataController.swift in Sources */,
 				7AEE5EF529EABA9900B80107 /* NoInternetAccess.swift in Sources */,
 				7A0FDDE029E5CC9D00692F45 /* Blur.swift in Sources */,
@@ -478,6 +580,7 @@
 				7A99756129E6774C0062802D /* SelectComponent.swift in Sources */,
 				7AD8A03729E4602C003ACD0D /* LoginView.swift in Sources */,
 				7AAB42C529E577FD006F8FCB /* Extensions.swift in Sources */,
+				7A682AF22A0FED3F00C59EA8 /* FirebaseApp.m in Sources */,
 				7A536EA629E87E3800A95ED5 /* Extension+View.swift in Sources */,
 				7A99755F29E674040062802D /* CalculateAttendance.c in Sources */,
 				7A776A4F29E9D49800F61E1F /* ResultManager.swift in Sources */,
@@ -489,6 +592,7 @@
 				7A99756A29E6C3900062802D /* AttendanceSheetView.swift in Sources */,
 				7A776A5329E9DC6B00F61E1F /* StudentResult.swift in Sources */,
 				7A68A59C29E48442007B1E13 /* LoginPageView.swift in Sources */,
+				7A54C8082A0214110071ACBD /* VentHomeView.swift in Sources */,
 				7AEE5EEF29EAA41700B80107 /* ExaminationScheduleView.swift in Sources */,
 				7A309F9929EEF82B008EE05E /* WebsiteNotWorking.swift in Sources */,
 				7AEE5EDB29EA540900B80107 /* RegistrationModel.swift in Sources */,
@@ -618,12 +722,13 @@
 		};
 		7AD8A03329E45D62003ACD0D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18ED4A4A949DCC13D2FFE3B0 /* Pods-JIIT_Buddy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"JIIT_Buddy/Preview Content\"";
 				DEVELOPMENT_TEAM = 9V43N6T968;
 				ENABLE_PREVIEWS = YES;
@@ -642,7 +747,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.4;
+				MARKETING_VERSION = 1.4.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anshumali.JIIT-Buddy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -658,12 +763,13 @@
 		};
 		7AD8A03429E45D62003ACD0D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85F95BED000AD6E614E707E2 /* Pods-JIIT_Buddy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"JIIT_Buddy/Preview Content\"";
 				DEVELOPMENT_TEAM = 9V43N6T968;
 				ENABLE_PREVIEWS = YES;
@@ -682,7 +788,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.4;
+				MARKETING_VERSION = 1.4.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anshumali.JIIT-Buddy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

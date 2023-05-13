@@ -4,3 +4,5 @@
 
 #include "CalculateAttendance.h"
 #include <LocalAuthentication/LocalAuthentication.h>
+#include "AppDelegate.h"
+#include "FirebaseApp.h"

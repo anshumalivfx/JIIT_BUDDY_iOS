@@ -22,9 +22,10 @@ struct ExamSittingComponent: View {
             HStack {
                 VStack(alignment: .leading) {
                     Text(subjectName)
-                        .font(.title)
-                        .fontWeight(.medium)
+                        .lineLimit(2)
+                        .font(.headline)
                         .foregroundColor(.white)
+                    
                     Spacer()
                     HStack {
                         VStack(alignment: .leading){

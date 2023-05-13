@@ -91,12 +91,15 @@ struct ExaminationScheduleView: View {
                                     
                                     Button(action: {
                                         examScheduleData = []
+                                        secondaryLoader = true
                                         selectedExamIndex = index
                                         requestExamSchedule(token: token, memberid: studentid, instituteid: instituteid, exameventid: examEvent[index].exameventid ?? "", registrationid: semList[selectedSemesterIndex].registrationid) { success in
                                             
                                             switch success {
                                             case .success(let response):
-                                                examScheduleData = response.response.subjectinfo
+                                                examScheduleData = response.response!.subjectinfo
+                                                print("\(examScheduleData)")
+                                                secondaryLoader = false
                                             case .failure(let error):
                                                 print("\(error)")
                                             }
@@ -133,17 +136,28 @@ struct ExaminationScheduleView: View {
                 
                 
             }
-            .padding(.all)
+            .padding(.horizontal)
             Spacer()
-            
-            if examScheduleData.isEmpty {
-                Text("Nothing Selected")
-                    .foregroundColor(.white)
-            } else {
-                ForEach(0..<examScheduleData.count){ index in
-                    ExamSittingComponent(subjectName: examScheduleData[index].subject, date: examScheduleData[index].examDate, time: examScheduleData[index].examTime, room: examScheduleData[index].roomNumber == "" ? "NA" : examScheduleData[index].roomNumber, seatNumber: examScheduleData[index].seatNumber == "" ? "NA" : examScheduleData[index].seatNumber )
+            if secondaryLoader{
+                Spinner()
+            }
+            else {
+                if examScheduleData.isEmpty {
+                    Text("Nothing Selected")
+                        .foregroundColor(.white)
+                } else {
+                    
+                    
+                    ScrollView {
+                        
+                        ForEach(0..<examScheduleData.count){ index in
+                            ExamSittingComponent(subjectName: examScheduleData[index].subjectdesc ?? "", date: examScheduleData[index].datetime ?? "", time: examScheduleData[index].datetimefrom ?? "", room: examScheduleData[index].roomcode ?? "NA", seatNumber: examScheduleData[index].seatno ?? "NA")
+                        }
+                    }
+                    
                 }
             }
+            
             
         }
         

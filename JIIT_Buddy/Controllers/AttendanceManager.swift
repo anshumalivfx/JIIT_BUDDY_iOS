@@ -197,7 +197,3 @@ func getPercentageDetails(token: String, studentid: String, subjectid: String, r
     }
     task.resume()
 }
-
-
-
-

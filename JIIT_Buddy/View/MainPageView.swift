@@ -360,6 +360,8 @@ struct MainPageView: View {
             }
                 .onAppear {
                     faceIDAuth()
+                    let db = PostData()
+                    db.sendPost("hello")
                 }
         }
         

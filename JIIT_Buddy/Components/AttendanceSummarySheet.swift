@@ -26,7 +26,7 @@ struct AttendanceSummarySheet: View {
                     Text(item.classtype.rawValue)
                     Spacer()
                     Text(item.present)
-                }
+                }.listRowBackground(Color.clear)
             }
         }
 }

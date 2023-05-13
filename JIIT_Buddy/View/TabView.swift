@@ -28,23 +28,47 @@ struct HomeTabView: View {
                 MainPageView(memberid: memberid, clientId: clientid, tokenResponse: token)
                     .tabItem {
                         Image(systemName: "house.fill")
-                        Text("House")
+                        Text("Home")
                     }
                 
                 ZStack {
                     Color.background.ignoresSafeArea(.all)
                     VStack {
-                        Text("Coming Soon.....")
-                            .font(.largeTitle)
-                            .foregroundColor(.white)
-                            .scaleEffect(isAnimating ? 1.2 : 1)
-                            .animation(
-                                Animation.easeInOut(duration: 1.5)
-                                    .repeatForever(autoreverses: true)
-                            )
+                        HStack {
+                            Image(systemName: "bubble.left.fill")
+                                .font(.largeTitle)
+                                .foregroundColor(.white)
+//                                .scaleEffect(isAnimating ? 1.2 : 1)
+//                                .animation(
+//                                    Animation.easeInOut(duration: 1.5)
+//                                        .repeatForever(autoreverses: true)
+//                                )
+                            Text("Coming Soon.....")
+                                .font(.largeTitle)
+                                .foregroundColor(.white)
+                                
+                            
+                            
+                            Image(systemName: "bubble.right.fill")
+                                .font(.largeTitle)
+                                .foregroundColor(.white)
+//                                .scaleEffect(isAnimating ? 1.2 : 1)
+//                                .animation(
+//                                    Animation.easeInOut(duration: 1.5)
+//                                        .repeatForever(autoreverses: true)
+//                                )
+//
+                        }
+                        .scaleEffect(isAnimating ? 1.2 : 1)
+                        .animation(
+                            Animation.easeInOut(duration: 1.5)
+                                .repeatForever(autoreverses: true)
+                        )
+                        
                             
                             
                     }
+                    
                     .onAppear {
                         withAnimation(.easeInOut(duration: 1.5)) {
                             isAnimating = true
@@ -53,7 +77,7 @@ struct HomeTabView: View {
                 }
                     .tabItem {
                         Image(systemName: "paperplane.fill")
-                        Text("Vent Room")
+                        Text("Vent House")
                     }
             }
             .accentColor(Color.white)

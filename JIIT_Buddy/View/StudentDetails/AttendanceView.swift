@@ -75,10 +75,11 @@ struct AttendanceView: View {
                                 Text(semList[selectedSemesterIndex].registrationcode)
                                 Image(systemName: "chevron.down")
                             }
+                            
                         }
-                        .foregroundColor(.white)
                         
                     }
+                    .foregroundColor(.white)
                     .buttonStyle(.plain)
                     .padding(.all)
                     Spacer()
@@ -219,6 +220,7 @@ struct AttendanceView: View {
         } content: {
             AttendanceSummarySheet(data: attendanceSummary)
                 .background(RemoveBackgroundColor())
+                
         }
 
     }

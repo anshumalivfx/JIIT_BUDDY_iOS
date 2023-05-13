@@ -54,6 +54,15 @@ struct WebsiteNotWorking: View {
             }
             else {
                 VStack(spacing: 50) {
+                    ZStack {
+                        Image("Pig")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            
+                        
+                    }
+                    
+                    
                     Text("Webportal Ain't Workin'")
                         .font(.largeTitle)
                         .foregroundColor(.white)
@@ -86,6 +95,8 @@ struct WebsiteNotWorking: View {
         }
         
     }
+    
+    
     
 }
 
