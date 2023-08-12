@@ -30,30 +30,32 @@ struct AttendanceSheetView: View {
                 .frame(width: 370, height: 150)
             
             HStack(alignment: .top) {
-                VStack {
+                VStack(alignment: .leading) {
                 Spacer()
                     
                     Text(courseName)
                         .font(.footnote)
                         .foregroundColor(.white)
+                    Spacer()
+                    HStack {
+                        Text("Total Classes: \(totalClasses)")
+                            .font(.caption2)
+                            .foregroundColor(.white)
+                        Spacer()
+                        Text("You Attended: \(totalClasses-TotalPres)")
+                            .font(.caption2)
+                            .foregroundColor(.white)
+                    }
                     
-                    Text("Total Classes: \(totalClasses)")
-                        .font(.subheadline)
-                        .foregroundColor(.white)
-                    
-                    Text("You Attended: \(totalClasses-TotalPres)")
-                        .font(.subheadline)
-                        .foregroundColor(.white)
                 }
-                Spacer()
                 VStack {
                     StrokeText(text: "\(attpercentage)%", width: 0.5, color: .black)
                                 .foregroundColor(.white)
                                 .font(.system(size: 45, weight: .medium))
                     Spacer()
-                    Text("Need to Attend: \(classesNeededToAttend)")
-                        .font(.subheadline)
-                        .foregroundColor(.white)
+//                    Text("Need to Attend: \(classesNeededToAttend)")
+//                        .font(.subheadline)
+//                        .foregroundColor(.white)
                 }
                 
                 

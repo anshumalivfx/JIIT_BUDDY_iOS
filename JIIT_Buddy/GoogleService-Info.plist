@@ -30,5 +30,7 @@
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:406096995253:ios:9ff18c3b27a9b306f0effc</string>
+	<key>DATABASE_URL</key>
+	<string>https://jiitbuddy-e64bb-default-rtdb.firebaseio.com</string>
 </dict>
 </plist>

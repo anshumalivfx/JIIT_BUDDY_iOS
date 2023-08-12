@@ -70,14 +70,7 @@ struct WebsiteNotWorking: View {
                     Text("Sorry for the Inconvenience")
                         .foregroundColor(.white.opacity(0.5))
                     
-                    Text("༎ຶ‿༎ຶ")
-                        .font(.largeTitle)
-                        .foregroundColor(.white)
-                        .scaleEffect(isAnimating ? 1.2 : 1)
-                        .animation(
-                            Animation.easeInOut(duration: 1.5)
-                                .repeatForever(autoreverses: true)
-                        )
+                    
                 }
                 
                 .onAppear {

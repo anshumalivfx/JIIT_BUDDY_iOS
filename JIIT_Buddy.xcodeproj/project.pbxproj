@@ -12,6 +12,8 @@
 		7A0FDDE029E5CC9D00692F45 /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0FDDDF29E5CC9D00692F45 /* Blur.swift */; };
 		7A0FDDE229E5CD3700692F45 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0FDDE129E5CD3700692F45 /* NavigationBar.swift */; };
 		7A0FDDE529E5D9B400692F45 /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0FDDE429E5D9B400692F45 /* Shapes.swift */; };
+		7A1C63362A8806750001A05A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1C63352A8806750001A05A /* AppDelegate.swift */; };
+		7A1C63382A8809D10001A05A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A1C63372A8809D10001A05A /* GoogleService-Info.plist */; };
 		7A309F9929EEF82B008EE05E /* WebsiteNotWorking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A309F9829EEF82B008EE05E /* WebsiteNotWorking.swift */; };
 		7A536EA629E87E3800A95ED5 /* Extension+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A536EA529E87E3700A95ED5 /* Extension+View.swift */; };
 		7A54C8082A0214110071ACBD /* VentHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A54C8072A0214110071ACBD /* VentHomeView.swift */; };
@@ -25,7 +27,6 @@
 		7A776A5129E9D90A00F61E1F /* ResultCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A776A5029E9D90A00F61E1F /* ResultCard.swift */; };
 		7A776A5329E9DC6B00F61E1F /* StudentResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A776A5229E9DC6B00F61E1F /* StudentResult.swift */; };
 		7A776A5529EA446600F61E1F /* RegisteredSubjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A776A5429EA446600F61E1F /* RegisteredSubjects.swift */; };
-		7A80FB7B2A0FDCAA0082102E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A80FB7A2A0FDCAA0082102E /* GoogleService-Info.plist */; };
 		7A84289029FD39CC00C65871 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84288F29FD39CC00C65871 /* TabView.swift */; };
 		7A84289229FD43FA00C65871 /* ExamSittingComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84289129FD43FA00C65871 /* ExamSittingComponent.swift */; };
 		7A99755F29E674040062802D /* CalculateAttendance.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A99755E29E674040062802D /* CalculateAttendance.c */; };
@@ -95,6 +96,8 @@
 		7A0FDDDF29E5CC9D00692F45 /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
 		7A0FDDE129E5CD3700692F45 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		7A0FDDE429E5D9B400692F45 /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
+		7A1C63352A8806750001A05A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7A1C63372A8809D10001A05A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7A309F9829EEF82B008EE05E /* WebsiteNotWorking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteNotWorking.swift; sourceTree = "<group>"; };
 		7A536EA529E87E3700A95ED5 /* Extension+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+View.swift"; sourceTree = "<group>"; };
 		7A54C8072A0214110071ACBD /* VentHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentHomeView.swift; sourceTree = "<group>"; };
@@ -110,7 +113,6 @@
 		7A776A5029E9D90A00F61E1F /* ResultCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCard.swift; sourceTree = "<group>"; };
 		7A776A5229E9DC6B00F61E1F /* StudentResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentResult.swift; sourceTree = "<group>"; };
 		7A776A5429EA446600F61E1F /* RegisteredSubjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredSubjects.swift; sourceTree = "<group>"; };
-		7A80FB7A2A0FDCAA0082102E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7A84288F29FD39CC00C65871 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		7A84289129FD43FA00C65871 /* ExamSittingComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamSittingComponent.swift; sourceTree = "<group>"; };
 		7A99755C29E674040062802D /* JIIT_Buddy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JIIT_Buddy-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 		7A99756529E6AB390062802D /* StudentAttendance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentAttendance.swift; sourceTree = "<group>"; };
 		7A99756729E6AB6D0062802D /* AttendanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceManager.swift; sourceTree = "<group>"; };
 		7A99756929E6C38F0062802D /* AttendanceSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceSheetView.swift; sourceTree = "<group>"; };
+		7A9A272F2A88015400D587EA /* JIIT_Buddy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JIIT_Buddy.entitlements; sourceTree = "<group>"; };
 		7AA18B0E29E48C6900BDF04B /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		7AA18B1129E48DB300BDF04B /* WebPortalResponseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPortalResponseModels.swift; sourceTree = "<group>"; };
 		7AAB42BB29E49409006F8FCB /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
@@ -201,6 +204,16 @@
 				7A54C80A2A0214A20071ACBD /* NavigationBarVentHouse.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		7A5820B62A0FF946005C2F89 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				7A99755C29E674040062802D /* JIIT_Buddy-Bridging-Header.h */,
+				7A99755D29E674040062802D /* CalculateAttendance.h */,
+				7A682AEC2A0FE93500C59EA8 /* AppDelegate.h */,
+			);
+			path = Headers;
 			sourceTree = "<group>";
 		};
 		7A5F64E92A0180A20008D145 /* VentHouse */ = {
@@ -322,8 +335,10 @@
 		7AD8A02129E45D61003ACD0D /* JIIT_Buddy */ = {
 			isa = PBXGroup;
 			children = (
+				7A9A272F2A88015400D587EA /* JIIT_Buddy.entitlements */,
+				7A1C63372A8809D10001A05A /* GoogleService-Info.plist */,
+				7A5820B62A0FF946005C2F89 /* Headers */,
 				7A682AEF2A0FECF800C59EA8 /* FirebaseObjc */,
-				7A80FB7A2A0FDCAA0082102E /* GoogleService-Info.plist */,
 				7A5F64E92A0180A20008D145 /* VentHouse */,
 				7ABB926629F8192B009451D1 /* JIIT-Buddy-Info.plist */,
 				7AD2873B29EBED8100986EF2 /* UIKit */,
@@ -336,14 +351,12 @@
 				7AD8A03829E4604D003ACD0D /* Components */,
 				7AD8A03529E46011003ACD0D /* View */,
 				7AD8A02229E45D61003ACD0D /* JIIT_BuddyApp.swift */,
+				7A1C63352A8806750001A05A /* AppDelegate.swift */,
 				7AD8A02629E45D62003ACD0D /* Assets.xcassets */,
 				7AD8A02B29E45D62003ACD0D /* Persistence.swift */,
 				7AD8A02D29E45D62003ACD0D /* JIIT_Buddy.xcdatamodeld */,
 				7AD8A02829E45D62003ACD0D /* Preview Content */,
-				7A99755D29E674040062802D /* CalculateAttendance.h */,
 				7A99755E29E674040062802D /* CalculateAttendance.c */,
-				7A99755C29E674040062802D /* JIIT_Buddy-Bridging-Header.h */,
-				7A682AEC2A0FE93500C59EA8 /* AppDelegate.h */,
 				7A682AED2A0FE93500C59EA8 /* AppDelegate.m */,
 			);
 			path = JIIT_Buddy;
@@ -483,8 +496,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A1C63382A8809D10001A05A /* GoogleService-Info.plist in Resources */,
 				7AD8A02A29E45D62003ACD0D /* Preview Assets.xcassets in Resources */,
-				7A80FB7B2A0FDCAA0082102E /* GoogleService-Info.plist in Resources */,
 				7AD8A02729E45D62003ACD0D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -577,6 +590,7 @@
 				7AEE5EED29EAA04500B80107 /* EventMarksView.swift in Sources */,
 				7AAB42C229E56403006F8FCB /* MainPageView.swift in Sources */,
 				7AE0A81529E86F9500874E00 /* ChartData.swift in Sources */,
+				7A1C63362A8806750001A05A /* AppDelegate.swift in Sources */,
 				7A99756129E6774C0062802D /* SelectComponent.swift in Sources */,
 				7AD8A03729E4602C003ACD0D /* LoginView.swift in Sources */,
 				7AAB42C529E577FD006F8FCB /* Extensions.swift in Sources */,
@@ -727,8 +741,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = JIIT_Buddy/JIIT_Buddy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_ASSET_PATHS = "\"JIIT_Buddy/Preview Content\"";
 				DEVELOPMENT_TEAM = 9V43N6T968;
 				ENABLE_PREVIEWS = YES;
@@ -747,14 +762,14 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.2;
+				MARKETING_VERSION = 1.4.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anshumali.JIIT-Buddy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "JIIT_Buddy/JIIT_Buddy-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "JIIT_Buddy/Headers/JIIT_Buddy-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -768,8 +783,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = JIIT_Buddy/JIIT_Buddy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_ASSET_PATHS = "\"JIIT_Buddy/Preview Content\"";
 				DEVELOPMENT_TEAM = 9V43N6T968;
 				ENABLE_PREVIEWS = YES;
@@ -788,14 +804,14 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.2;
+				MARKETING_VERSION = 1.4.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anshumali.JIIT-Buddy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "JIIT_Buddy/JIIT_Buddy-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "JIIT_Buddy/Headers/JIIT_Buddy-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

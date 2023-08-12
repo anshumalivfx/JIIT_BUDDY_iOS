@@ -16,10 +16,14 @@ func getAttendance(studentId: String, token: String, instituteid: String,complet
     var request = URLRequest(url: url)
 
     request.httpMethod = "POST"
-    request.setValue("application/json", forHTTPHeaderField: "Accept")
-    request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+    request.setValue("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.0.0", forHTTPHeaderField: "User-Agent")
+    request.setValue("\"Microsoft Edge\";v=\"117\", \"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"117\"", forHTTPHeaderField: "sec-ch-ua")
+    request.setValue("?0", forHTTPHeaderField: "sec-ch-ua-mobile")
+    request.setValue("macOS", forHTTPHeaderField: "sec-ch-ua-platform")
     request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-    request.setValue("webportal.jiit.ac.in:6011", forHTTPHeaderField: "Host")
+    request.setValue("application/json, text/plain, */*", forHTTPHeaderField: "Accept")
+    request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+    request.setValue("https://webportal.jiit.ac.in:6011/studentportal/", forHTTPHeaderField: "Referer")
     request.setValue("https://webportal.jiit.ac.in:6011", forHTTPHeaderField: "Origin")
     let body = [
         "clientid": "JAYPEE",
@@ -59,21 +63,29 @@ func getAttendance(studentId: String, token: String, instituteid: String,complet
 
 func getSemesterAttendance(studentid: String, stynumber: String, registrationid: String, token: String, instituteid: String, completionHandler: @escaping (Result<AttendanceAPIResponse, Error>) -> Void) {
     let url = URL(string: "https://webportal.jiit.ac.in:6011/StudentPortalAPI/StudentClassAttendance/getstudentattendancedetail")!
-    let headers = [
-        "Accept": "application/json",
-        "Authorization": "Bearer \(token)",
-        "Content-Type": "application/json",
-        "Host": "webportal.jiit.ac.in:6011",
-        "Origin": "https://webportal.jiit.ac.in:6011",
-        "User-Agent": "Thunder Client (https://www.thunderclient.com)"
-    ]
+//    let headers = [
+//        "Accept": "application/json",
+//        "Authorization": "Bearer \(token)",
+//        "Content-Type": "application/json",
+//        "Host": "webportal.jiit.ac.in:6011",
+//        "Origin": "https://webportal.jiit.ac.in:6011",
+//        "User-Agent": "Thunder Client (https://www.thunderclient.com)"
+//    ]
     let request = AttendanceAPIRequest(instituteid: instituteid, studentid: studentid, stynumber: stynumber, registrationid: registrationid)
     
     do {
         let jsonData = try JSONEncoder().encode(request)
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "POST"
-        urlRequest.allHTTPHeaderFields = headers
+        urlRequest.setValue("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.0.0", forHTTPHeaderField: "User-Agent")
+        urlRequest.setValue("\"Microsoft Edge\";v=\"117\", \"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"117\"", forHTTPHeaderField: "sec-ch-ua")
+        urlRequest.setValue("?0", forHTTPHeaderField: "sec-ch-ua-mobile")
+        urlRequest.setValue("macOS", forHTTPHeaderField: "sec-ch-ua-platform")
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.setValue("application/json, text/plain, */*", forHTTPHeaderField: "Accept")
+        urlRequest.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        urlRequest.setValue("https://webportal.jiit.ac.in:6011/studentportal/", forHTTPHeaderField: "Referer")
+        urlRequest.setValue("https://webportal.jiit.ac.in:6011", forHTTPHeaderField: "Origin")
         urlRequest.httpBody = jsonData
         
         let task = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
@@ -137,16 +149,26 @@ func getSemesterAttendance(studentid: String, stynumber: String, registrationid:
 func getPercentageDetails(token: String, studentid: String, subjectid: String, registrationid: String, instituteid: String, subjectcomponentids: [String], completion: @escaping (Result<AttendancePercentageDetails, Error>) -> Void) {
     let url = URL(string: "https://webportal.jiit.ac.in:6011/StudentPortalAPI/StudentClassAttendance/getstudentsubjectpersentage")!
     var request = URLRequest(url: url)
-    let headers = [
-        "Accept": "application/json",
-        "Authorization": "Bearer \(token)",
-        "Content-Type": "application/json",
-        "Host": "webportal.jiit.ac.in:6011",
-        "Origin": "https://webportal.jiit.ac.in:6011",
-        "User-Agent": "Thunder Client (https://www.thunderclient.com)"
-    ]
+//    let headers = [
+//        "Accept": "application/json",
+//        "Authorization": "Bearer \(token)",
+//        "Content-Type": "application/json",
+//        "Host": "webportal.jiit.ac.in:6011",
+//        "Origin": "https://webportal.jiit.ac.in:6011",
+//        "User-Agent": "Thunder Client (https://www.thunderclient.com)"
+//    ]
+//    request.httpMethod = "POST"
+//    request.allHTTPHeaderFields = headers
     request.httpMethod = "POST"
-    request.allHTTPHeaderFields = headers
+    request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+    request.setValue("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.0.0", forHTTPHeaderField: "User-Agent")
+    request.setValue("\"Microsoft Edge\";v=\"117\", \"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"117\"", forHTTPHeaderField: "sec-ch-ua")
+    request.setValue("?0", forHTTPHeaderField: "sec-ch-ua-mobile")
+    request.setValue("macOS", forHTTPHeaderField: "sec-ch-ua-platform")
+    request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+    request.setValue("application/json, text/plain, */*", forHTTPHeaderField: "Accept")
+    request.setValue("https://webportal.jiit.ac.in:6011/studentportal/", forHTTPHeaderField: "Referer")
+    request.setValue("https://webportal.jiit.ac.in:6011", forHTTPHeaderField: "Origin")
     
    
     

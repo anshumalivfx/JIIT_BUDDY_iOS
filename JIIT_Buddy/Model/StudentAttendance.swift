@@ -265,4 +265,3 @@ class AttendancePercentageJSONNull: Codable, Hashable {
 struct Cmpidkey: Codable {
     let subjectcomponentid: String
 }
-

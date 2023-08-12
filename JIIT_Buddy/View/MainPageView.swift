@@ -21,7 +21,7 @@ struct MainPageView: View {
     @AppStorage("memberid") var memberid: String = ""
     @AppStorage("instituteid") var instituteid: String = ""
     @AppStorage("attendancecriteria") var criteria: Double = 0.0
-    
+    @Environment(\.openURL) private var openURL
     @AppStorage("userid") var userid: String = ""
     @AppStorage("password") var userpassword: String = ""
     @State var showAlert: Bool = false
@@ -153,13 +153,13 @@ struct MainPageView: View {
                                     }
                                     .buttonStyle(.plain)
                                     
-                                    Button {
-                                        showAttendanceCriteria.toggle()
-                                        
-                                    } label: {
-                                        SelectComponent(textBody: "Set Attendance Criteria", imageName: "exclamationmark.circle")
-                                    }
-                                    .buttonStyle(.plain)
+//                                    Button {
+//                                        showAttendanceCriteria.toggle()
+//                                        
+//                                    } label: {
+//                                        SelectComponent(textBody: "Set Attendance Criteria", imageName: "exclamationmark.circle")
+//                                    }
+//                                    .buttonStyle(.plain)
                                     
                                     
                                     //
@@ -175,12 +175,74 @@ struct MainPageView: View {
                             
                             Spacer()
                             
-                    
                             
-                            Text("Anshumali Karna's love-infused creation ❤️")
-                                .foregroundColor(.white.opacity(0.8))
-                                .frame(alignment: .bottom)
-                            
+                            VStack {
+                                HStack {
+                                    Button {
+                                        if let url = URL(string: "https://www.instagram.com/anshumalikarna") {
+                                                        openURL(url)
+                                        }
+                                    } label: {
+                                        Image("instagram")
+                                            
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fill)
+                                            .frame(width: 30, height: 30)
+                                    
+                                            
+                                    }
+                                    .buttonStyle(.plain)
+
+                                    Button {
+                                        if let url = URL(string: "https://twitter.com/anshumaii") {
+                                                        openURL(url)
+                                        }
+                                    } label: {
+                                        Image("twitter")
+                                            
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fill)
+                                            .frame(width: 30, height: 30)
+                                    
+                                            
+                                    }
+                                    .buttonStyle(.plain)
+                                    
+                                    Button {
+                                        if let url = URL(string: "https://www.linkedin.com/in/anshumalikarna/") {
+                                                        openURL(url)
+                                        }
+                                    } label: {
+                                        Image("linkedin")
+                                            
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fill)
+                                            .frame(width: 30, height: 30)
+                                    
+                                            
+                                    }
+                                    .buttonStyle(.plain)
+                                    
+                                    Button {
+                                        if let url = URL(string: "https://github.com/anshumalivfx") {
+                                                        openURL(url)
+                                        }
+                                    } label: {
+                                        Image("github")
+                                            
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fill)
+                                            .frame(width: 30, height: 30)
+                                    
+                                            
+                                    }
+                                    .buttonStyle(.plain)
+                                }
+                                Text("Anshumali Karna's love-infused creation ❤️")
+                                    .foregroundColor(.white.opacity(0.8))
+                                    .frame(alignment: .bottom)
+                                
+                            }
                         }
                         .safeAreaInset(edge: .top) {
                             EmptyView()
@@ -194,7 +256,7 @@ struct MainPageView: View {
                     ZStack {
                         NavigationBar(isOn: $LogOutAlertisOn)
                     }
-
+                    
                 })
                 .toolbar(content: {
                     ToolbarItem(placement: .navigationBarTrailing) {
@@ -203,140 +265,140 @@ struct MainPageView: View {
                                 LogOutAlertisOn.toggle()
                                 
                             }
-                            label: {
-                                Image(systemName: "rectangle.portrait.and.arrow.right")
-                                    .font(.system(size: 28))
-                                    .frame(width: 44, height: 44, alignment: .trailing)
-                            }
+                        label: {
+                            Image(systemName: "rectangle.portrait.and.arrow.right")
+                                .font(.system(size: 28))
+                                .frame(width: 44, height: 44, alignment: .trailing)
+                        }
                         .buttonStyle(.plain)
                         }
                     }
                     
                 })
-                    .onAppear {
-                        self.spinner = true
-                        DispatchQueue.main.async {
-                            getPersonalInformation(memberId: self.memberId, clientId: self.clientId, token: self.tokenResponse, instituteid: instituteid) { result in
+                .onAppear {
+                    self.spinner = true
+                    DispatchQueue.main.async {
+                        getPersonalInformation(memberId: self.memberId, clientId: self.clientId, token: self.tokenResponse, instituteid: instituteid) { result in
+                            
+                            
+                            switch result {
+                            case .success(let personalInfoResponse):
+                                // Do something with the response
+                                personalInformation = personalInfoResponse
                                 
+                            case .failure(let error):
+                                // Handle the error
+                                isAuthenticated = false
                                 
-                                switch result {
-                                case .success(let personalInfoResponse):
-                                    // Do something with the response
-                                    personalInformation = personalInfoResponse
-                                    
-                                case .failure(let error):
-                                    // Handle the error
-                                    isAuthenticated = false
-                                    
-                                    print(error)
-                                    showAlert = true
-                                }
+                                print(error)
+                                showAlert = true
                             }
                         }
-                        
-                        print(memberid)
-                        print(instituteid)
-                        
-                        getStudentResult(token: token, studentid: memberid, stynumber: String((personalInformation?.response.generalinformation.semester ?? 1)), instituteid: instituteid) { result in
+                    }
+                    
+                    print(memberid)
+                    print(instituteid)
+                    
+                    getStudentResult(token: token, studentid: memberid, stynumber: String((personalInformation?.response.generalinformation.semester ?? 1)), instituteid: instituteid) { result in
+                        switch result {
+                        case .success(let response):
+                            Result = response.response.semesterList
+                            self.spinner = false
+                        case .failure(let error):
+                            print("\(error)")
+                        }
+                    }
+                }
+                .alert(isPresented: $showAlert) {
+                    Alert(title: Text("Internal Server Error from CampusLynx"), primaryButton: Alert.Button.default(Text("Retry"), action: {
+                        self.spinner = true
+                        getPersonalInformation(memberId: self.memberId, clientId: self.clientId, token: self.tokenResponse, instituteid: instituteid) { result in
                             switch result {
-                            case .success(let response):
-                                Result = response.response.semesterList
+                            case .success(let personalInfoResponse):
+                                // Do something with the response
+                                personalInformation = personalInfoResponse
                                 self.spinner = false
                             case .failure(let error):
-                                print("\(error)")
+                                // Handle the error
+                                showAlert = true
+                                print(error)
+                                spinner = false
                             }
                         }
+                    }), secondaryButton: .destructive(Text("Quit JIIT Buddy"), action: {
+                        exit(0)
+                    }))
+                    
+                    
+                    
+                }
+                .alert(isPresented: $LogOutAlertisOn, content: {
+                    Alert(title: Text("Logout?"), primaryButton: .default(Text("Yes"), action: {
+                        logout()
+                    }), secondaryButton: .cancel(Text("Cancel"), action: {
+                        
+                    }))
+                })
+                
+                .blurredSheet(.init(.thinMaterial), show: $showAttendance, onDismiss: {
+                    
+                }, content: {
+                    AttendanceView(studentid: memberid, token: token)
+                        .preferredColorScheme(.dark)
+                    //            NewView()
+                })
+                .blurredSheet(.init(.ultraThinMaterial), show: $showResult, onDismiss: {
+                    
+                }, content: {
+                    StudentResult(studentResult: Result)
+                        .background(RemoveBackgroundColor())
+                })
+                .blurredSheet(.init(.ultraThinMaterial), show: $showRegisteredSubjects, onDismiss: {
+                    
+                }, content: {
+                    RegisteredSubjects(token: token, StudentId: memberid, instituteid: instituteid)
+                })
+                .blurredSheet(.init(.ultraThinMaterial), show: $showGradeCard, onDismiss: {
+                    
+                }, content: {
+                    GradeCardView(instituteid: instituteid, token: token, studentid: memberid)
+                })
+                .blurredSheet(.init(.ultraThinMaterial), show: $showEventMarks, onDismiss: {
+                    
+                }, content: {
+                    EventMarksView(instituteid: instituteid, token: token, studentid: memberid)
+                })
+                
+                .blurredSheet(.init(.ultraThinMaterial), show: $showExamSchedule, onDismiss: {
+                    
+                }, content: {
+                    ExaminationScheduleView(instituteid: instituteid, token: token, studentid: memberid)
+                })
+                .alert("Set Attendance Criteria", isPresented: $showAttendanceCriteria, actions: {
+                    TextField("Attendance %", text: $attendanceCriteria).focused($isfieldFocused)
+                        .keyboardType(.numberPad)
+                        .foregroundColor(.black)
+                    Button {
+                        isfieldFocused = false
+                        criteria = Double(attendanceCriteria) ?? 0.0
+                    } label: {
+                        Text("Submit")
                     }
-                    .alert(isPresented: $showAlert) {
-                        Alert(title: Text("Internal Server Error from CampusLynx"), primaryButton: Alert.Button.default(Text("Retry"), action: {
-                            self.spinner = true
-                            getPersonalInformation(memberId: self.memberId, clientId: self.clientId, token: self.tokenResponse, instituteid: instituteid) { result in
-                                switch result {
-                                case .success(let personalInfoResponse):
-                                    // Do something with the response
-                                    personalInformation = personalInfoResponse
-                                    self.spinner = false
-                                case .failure(let error):
-                                    // Handle the error
-                                    showAlert = true
-                                    print(error)
-                                    spinner = false
-                                }
-                            }
-                        }), secondaryButton: .destructive(Text("Quit JIIT Buddy"), action: {
-                            exit(0)
-                        }))
-                        
-                        
-                        
-                    }
-                    .alert(isPresented: $LogOutAlertisOn, content: {
-                        Alert(title: Text("Logout?"), primaryButton: .default(Text("Yes"), action: {
-                            logout()
-                        }), secondaryButton: .cancel(Text("Cancel"), action: {
-                            
-                        }))
-                    })
                     
-                    .blurredSheet(.init(.thinMaterial), show: $showAttendance, onDismiss: {
-                        
-                    }, content: {
-                        AttendanceView(studentid: memberid, token: token)
-                            .preferredColorScheme(.dark)
-                        //            NewView()
-                    })
-                    .blurredSheet(.init(.ultraThinMaterial), show: $showResult, onDismiss: {
-                        
-                    }, content: {
-                        StudentResult(studentResult: Result)
-                            .background(RemoveBackgroundColor())
-                    })
-                    .blurredSheet(.init(.ultraThinMaterial), show: $showRegisteredSubjects, onDismiss: {
-                        
-                    }, content: {
-                        RegisteredSubjects(token: token, StudentId: memberid, instituteid: instituteid)
-                    })
-                    .blurredSheet(.init(.ultraThinMaterial), show: $showGradeCard, onDismiss: {
-                        
-                    }, content: {
-                        GradeCardView(instituteid: instituteid, token: token, studentid: memberid)
-                    })
-                    .blurredSheet(.init(.ultraThinMaterial), show: $showEventMarks, onDismiss: {
-                        
-                    }, content: {
-                        EventMarksView(instituteid: instituteid, token: token, studentid: memberid)
-                    })
-                    
-                    .blurredSheet(.init(.ultraThinMaterial), show: $showExamSchedule, onDismiss: {
-                        
-                    }, content: {
-                        ExaminationScheduleView(instituteid: instituteid, token: token, studentid: memberid)
-                    })
-                    .alert("Set Attendance Criteria", isPresented: $showAttendanceCriteria, actions: {
-                        TextField("Attendance %", text: $attendanceCriteria).focused($isfieldFocused)
-                            .keyboardType(.numberPad)
-                            .foregroundColor(.black)
-                        Button {
-                            isfieldFocused = false
-                            criteria = Double(attendanceCriteria) ?? 0.0
-                        } label: {
-                            Text("Submit")
-                        }
-
-                    })
+                })
                 
                 
                 
-                    
                 
                 
-        //        .sheet(isPresented: $showAttendance, content: {
-        //            AttendanceView(studentid: memberid, token: token)
-        //
-        //
-        //
-        //        })
-            .preferredColorScheme(.dark)
+                
+                //        .sheet(isPresented: $showAttendance, content: {
+                //            AttendanceView(studentid: memberid, token: token)
+                //
+                //
+                //
+                //        })
+                .preferredColorScheme(.dark)
             }
         } else {
             ZStack {
@@ -355,19 +417,19 @@ struct MainPageView: View {
                             .background(Color("green"))
                             .clipShape(Capsule())
                     }
-
+                    
                 }
             }
-                .onAppear {
-                    faceIDAuth()
-                    let db = PostData()
-                    db.sendPost("hello")
-                }
+            .onAppear {
+                faceIDAuth()
+                let db = PostData()
+                db.sendPost("hello")
+            }
         }
         
         
         
-                     
+        
     }
     
     
@@ -390,7 +452,7 @@ struct MainPageView: View {
         spinner = true
         if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
             context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Login Using Face Id or Touch Id") { success, authError in
-
+                
                 DispatchQueue.main.async {
                     if success {
                         signInUser(rollno: self.userid, password: self.userpassword) { result in
@@ -411,7 +473,7 @@ struct MainPageView: View {
                                 self.isAuthenticated = true
                                 self.faceUnlock = true
                                 
-
+                                
                             case .failure(let error):
                                 spinner = false
                                 showAlert = true
@@ -446,7 +508,7 @@ struct MainPageView: View {
                                 
                                 self.faceUnlock = true
                                 
-
+                                
                             case .failure(let error):
                                 spinner = false
                                 showAlert = true

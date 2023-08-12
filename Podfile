@@ -7,6 +7,7 @@ target 'JIIT_Buddy' do
   pod 'FirebaseCore'
   pod 'FirebaseAuth'
   pod 'FirebaseDatabase'
+  pod 'FirebaseMessaging'
   # Pods for JIIT_Buddy
 
 end

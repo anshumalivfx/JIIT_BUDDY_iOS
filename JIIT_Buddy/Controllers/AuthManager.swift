@@ -28,8 +28,31 @@ func signInUser(rollno: String, password: String, completion: @escaping (Result<
     request.httpMethod = "POST"
 
     // Add headers
+//    request.setValue("application/json, text/plain, */*", forHTTPHeaderField: "Accept")
+//    request.setValue("webportal.jiit.ac.in:6011", forHTTPHeaderField: "Host")
+//    request.setValue("JIIT_Buddy/1.4.3 (iOS 17.0; iPhone; Scale/3.00)", forHTTPHeaderField: "User-Agent")
+//    request.setValue("gzip, deflate, br", forHTTPHeaderField: "Accept-Encoding")
+//    request.setValue("en-US,en;q=0.9", forHTTPHeaderField: "Accept-Language")
+//    request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+//    request.setValue("https://webportal.jiit.ac.in:6011", forHTTPHeaderField: "Origin")
+//    request.setValue("keep-alive", forHTTPHeaderField: "Connection")
+//    request.setValue("https://webportal.jiit.ac.in:6011/studentportal/", forHTTPHeaderField: "Referer")
+//    request.setValue("empty", forHTTPHeaderField: "Sec-Fetch-Dest")
+//    request.setValue("cors", forHTTPHeaderField: "Sec-Fetch-Mode")
+//    request.setValue("same-origin", forHTTPHeaderField: "Sec-Fetch-Site")
+    
+    request.setValue("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.0.0", forHTTPHeaderField: "User-Agent")
+    request.setValue("\"Microsoft Edge\";v=\"117\", \"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"117\"", forHTTPHeaderField: "sec-ch-ua")
+    request.setValue("?0", forHTTPHeaderField: "sec-ch-ua-mobile")
+    request.setValue("macOS", forHTTPHeaderField: "sec-ch-ua-platform")
     request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-    request.setValue("application/json", forHTTPHeaderField: "Accept")
+    request.setValue("application/json, text/plain, */*", forHTTPHeaderField: "Accept")
+    request.setValue("Bearer", forHTTPHeaderField: "Authorization")
+    request.setValue("https://webportal.jiit.ac.in:6011/studentportal/", forHTTPHeaderField: "Referer")
+    request.setValue("https://webportal.jiit.ac.in:6011", forHTTPHeaderField: "Origin")
+
+    
+    
 
     // Create HTTP Body
     let jsonBody = [

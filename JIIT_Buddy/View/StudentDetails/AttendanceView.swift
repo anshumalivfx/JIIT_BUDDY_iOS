@@ -113,58 +113,62 @@ struct AttendanceView: View {
                                             showAttendanceDetails.toggle()
                                         } label: {
                                             
-                                            
-                                            
-                                            AttendanceSheetView(attpercentage: "\(attendanceVal[i])", courseName: "\(attendanceDict[i].subjectcode)", totalClasses:totalClasses[i], TotalPres: attendanceDict[i].abseent, registrationId: registrationID, subjectComponentId: [attendanceDict[i].lsubjectcomponentid, attendanceDict[i].tsubjectcomponentid, attendanceDict[i].psubjectcomponentid],token: token, studentid: studentid, subjectid: attendanceDict[i].subjectid, classesNeededToAttend: String(needToAttend[i])).onAppear{
-                                                
-                                                totalClasses[i] = attendanceSummary.count
-                                                
-                                                if (convertNtageToDouble(attendanceDict[i].ppercentage)==0){
-                                                    
-                                                    if convertNtageToDouble(attendanceDict[i].lTpercantage) == 0 {
-                                                        attendanceVal[i] = (convertNtageToDouble(attendanceDict[i].lpercentage))
+                                            if attendanceVal.isEmpty {
+                                                Text("No value lol")
+                                            } else {
+                                                AttendanceSheetView(attpercentage: "\(attendanceVal[i])", courseName: "\(attendanceDict[i].subjectcode)", totalClasses:totalClasses[i], TotalPres: attendanceDict[i].abseent, registrationId: registrationID, subjectComponentId: [attendanceDict[i].lsubjectcomponentid, attendanceDict[i].tsubjectcomponentid, attendanceDict[i].psubjectcomponentid],token: token, studentid: studentid, subjectid: attendanceDict[i].subjectid, classesNeededToAttend: String(needToAttend[i])).onAppear{
+                                                    if totalClasses.isEmpty {
+                                                        totalClasses[i] = attendanceSummary.count
+                                                    }
+                                                    if (convertNtageToDouble(attendanceDict[i].ppercentage)==0){
+                                                        
+                                                        if convertNtageToDouble(attendanceDict[i].lTpercantage) == 0 {
+                                                            attendanceVal[i] = (convertNtageToDouble(attendanceDict[i].lpercentage))
+                                                        }
+                                                        else {
+                                                            attendanceVal[i] = (convertNtageToDouble(attendanceDict[i].lTpercantage))
+                                                        }
+                                                        
                                                     }
                                                     else {
-                                                        attendanceVal[i] = (convertNtageToDouble(attendanceDict[i].lTpercantage))
+                                                        attendanceVal[i] = (convertNtageToDouble(attendanceDict[i].ppercentage))
                                                     }
                                                     
-                                                }
-                                                else {
-                                                    attendanceVal[i] = (convertNtageToDouble(attendanceDict[i].ppercentage))
-                                                }
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                getPercentageDetails(token: token, studentid: studentid, subjectid: attendanceDict[i].subjectid, registrationid: registrationID, instituteid: instituteid, subjectcomponentids: [attendanceDict[i].lsubjectcomponentid, attendanceDict[i].tsubjectcomponentid, attendanceDict[i].psubjectcomponentid], completion: { result in
-                                                    switch result {
-                                                    case .success(let attendancePercentageDetails):
-                                                        
-                                                        attendanceSummary = attendancePercentageDetails.response.studentAttdsummarylist
-                                                        
-                                                        totalClasses[i] = Int(attendanceSummary.count)
-                                                        
-                                                    case .failure(let error):
-                                                        print("Error: \(error.localizedDescription)")
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    getPercentageDetails(token: token, studentid: studentid, subjectid: attendanceDict[i].subjectid, registrationid: registrationID, instituteid: instituteid, subjectcomponentids: [attendanceDict[i].lsubjectcomponentid, attendanceDict[i].tsubjectcomponentid, attendanceDict[i].psubjectcomponentid], completion: { result in
+                                                        switch result {
+                                                        case .success(let attendancePercentageDetails):
+                                                            
+                                                            attendanceSummary = attendancePercentageDetails.response.studentAttdsummarylist
+                                                            
+                                                            totalClasses[i] = Int(attendanceSummary.count)
+                                                            
+                                                        case .failure(let error):
+                                                            print("Error: \(error.localizedDescription)")
+                                                        }
+                                                    })
+                                                    
+                                                    
+                                                    let criteria = (self.criteria ?? 0.0)/100
+                                                    
+                                                    print(criteria)
+                                                    
+                                                    if criteria > attendanceVal[i]/100 {
+                                                        let classesAttended = Int(totalClasses[i] - attendanceDict[i].abseent)
+                                                        needToAttend[i] = Int((criteria * Double(totalClasses[i]) - Double(classesAttended)))
+                                                        print(needToAttend[i])
                                                     }
-                                                })
-                                                
-                                                
-                                                let criteria = (self.criteria ?? 0.0)/100
-                                                
-                                                print(criteria)
-                                                
-                                                if criteria > attendanceVal[i]/100 {
-                                                    let classesAttended = Int(totalClasses[i] - attendanceDict[i].abseent)
-                                                    needToAttend[i] = Int((criteria * Double(totalClasses[i]) - Double(classesAttended)))
-                                                    print(needToAttend[i])
+                                                    
+                                                    
+                                                    
+                                                    
                                                 }
-                                                
-                                                
-                                                
-                                                
                                             }
+                                            
+                                            
                                         }
                                         .buttonStyle(.plain)
                                     }

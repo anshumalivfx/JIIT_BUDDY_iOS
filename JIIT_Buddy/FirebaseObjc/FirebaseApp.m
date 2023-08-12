@@ -18,12 +18,13 @@
     // Create a new child node at the "messages" location with a unique key
     FIRDatabaseReference *messagesRef = [databaseRef child:@"messages"];
     FIRDatabaseReference *newMessageRef = [messagesRef childByAutoId];
-
+    NSString *refc= newMessageRef.key;
     // Set the data to be saved
     NSDictionary *message = @{
+        @"id": refc,
         @"text": @"Hello, Firebase!",
         @"author": @"John Doe",
-        @"timestamp": [FIRServerValue timestamp]
+        @"timestamp": [NSNumber numberWithDouble:[[NSDate date] timeIntervalSince1970]]
     };
 
     // Save the data to the new child node

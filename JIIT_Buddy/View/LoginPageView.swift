@@ -21,7 +21,7 @@ struct HomeLoginView: View {
     @AppStorage("password") var userpassword: String = ""
     @State private var opacity = 0.0
     @State private var showAlert: Bool = false
-
+    @Environment(\.openURL) private var openURL
     var body: some View {
         VStack {
             Spacer()
@@ -129,10 +129,74 @@ struct HomeLoginView: View {
             .opacity(opacity)
             .disabled(rollno != "" && password != "" ? false : true)
             Spacer(minLength: 0)
+            VStack {
+                HStack {
+                    Button {
+                        if let url = URL(string: "https://www.instagram.com/anshumalikarna") {
+                                        openURL(url)
+                        }
+                    } label: {
+                        Image("instagram")
+                            
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 30, height: 30)
+                    
+                            
+                    }
+                    .buttonStyle(.plain)
+
+                    Button {
+                        if let url = URL(string: "https://twitter.com/anshumaii") {
+                                        openURL(url)
+                        }
+                    } label: {
+                        Image("twitter")
+                            
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 30, height: 30)
+                    
+                            
+                    }
+                    .buttonStyle(.plain)
+                    
+                    Button {
+                        if let url = URL(string: "https://www.linkedin.com/in/anshumalikarna/") {
+                                        openURL(url)
+                        }
+                    } label: {
+                        Image("linkedin")
+                            
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 30, height: 30)
+                    
+                            
+                    }
+                    .buttonStyle(.plain)
+                    
+                    Button {
+                        if let url = URL(string: "https://github.com/anshumalivfx") {
+                                        openURL(url)
+                        }
+                    } label: {
+                        Image("github")
+                            
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 30, height: 30)
+                    
+                            
+                    }
+                    .buttonStyle(.plain)
+                }
+                Text("Anshumali Karna's love-infused creation ❤️")
+                    .foregroundColor(.white.opacity(0.8))
+                    .frame(alignment: .bottom)
+                
+            }
             
-            Text("Anshumali Karna's love-infused creation ❤️")
-                .foregroundColor(.white.opacity(0.8))
-                 .frame(alignment: .bottom)
         }
         .alert(isPresented: $showAlert) {
             Alert(title: Text("Error"), message: Text("Invalid Credentials! \n Check your User Id and Password"), dismissButton: .default(Text("Ok")))
